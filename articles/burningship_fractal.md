@@ -2,7 +2,7 @@
 title: バーニングシップ・フラクタルを鑑賞する
 description: バーニングシップ・フラクタルをPythonのMatplotlibで表示して眺めます。
 date: 2025-07-18
-tag: [programming, math]
+tags: [programming, 数学]
 thumbnail: "/thumbnails/burningship_fractal.jpg"
 ---
 

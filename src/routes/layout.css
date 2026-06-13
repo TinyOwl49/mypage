@@ -2,59 +2,70 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-sans: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--color-text: #555;
 }
 
 @layer base {
-  :root {
-    --base-unit: 0.25rem; /* 4px */
-  }
+	:root {
+		--base-unit: 0.25rem;
+		/* 4px */
+	}
 
-  html {
-    /* かな詰め (Proportional Kana) */
-    font-feature-settings: "pkna";
-  }
+	html {
+		/* かな詰め (Proportional Kana) */
+		font-feature-settings: "pkna";
+	}
 
-  body {
-    /* テキストの折り返しとハイフン設定 */
-    line-break: strict;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    
-    /* 垂直リズムの基本設定 (1.75 = 28px/16px) */
-    line-height: 1.75;
-  }
+	body {
+		/* テキストの折り返しとハイフン設定 */
+		line-break: strict;
+		overflow-wrap: break-word;
+		hyphens: auto;
 
-  /* 見出しのカーニング設定 (Proportional Alternate Metrics) */
-  h1, h2, h3, h4, h5, h6 {
-    font-feature-settings: "palt";
-    letter-spacing: 0.04em;
-    line-height: 1.5;
-  }
+		/* 垂直リズムの基本設定 (1.75 = 28px/16px) */
+		line-height: 1.75;
+	}
+
+	/* 見出しのカーニング設定 (Proportional Alternate Metrics) */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-feature-settings: "palt";
+		letter-spacing: 0.04em;
+		line-height: 1.5;
+	}
 }
 
 /* Tailwind Typography (prose) overrides for Japanese typesetting */
 .prose {
-  max-width: 50rem; /* approx 50-55 characters */
-  line-height: 1.8;
+	max-width: 45rem;
+	/* approx 50-55 characters */
+	line-height: 1.8;
 }
 
-.prose h1, .prose h2, .prose h3, .prose h4 {
-  font-feature-settings: "palt";
-  letter-spacing: 0.04em;
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+	font-feature-settings: "palt";
+	letter-spacing: 0.04em;
 }
 
 .prose p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 /* Shiki code block styles */
 .shiki {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.875rem;
-  line-height: 1.7;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: 0.875rem;
+	line-height: 1.7;
 }

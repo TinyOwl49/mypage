@@ -2,7 +2,7 @@
 title: このブログについて
 description: このブログの誕生秘話です。
 date: 2026-05-01
-tags: [hello, blog]
+tags: [日記]
 thumbnail: /thumbnails/test1.png
 ---
 
