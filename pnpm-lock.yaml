@@ -7,13 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      rehype-katex-svelte:
-        specifier: ^1.2.0
-        version: 1.2.0
-      remark-math:
-        specifier: 3.0.0
-        version: 3.0.0
     devDependencies:
       '@sveltejs/adapter-static':
         specifier: ^3.0.10
@@ -39,6 +32,12 @@ importers:
       rehype-katex:
         specifier: ^7.0.1
         version: 7.0.1
+      rehype-katex-svelte:
+        specifier: ^1.2.0
+        version: 1.2.0
+      remark-math:
+        specifier: 3.0.0
+        version: 3.0.0
       remark-rehype:
         specifier: ^11.1.2
         version: 11.1.2

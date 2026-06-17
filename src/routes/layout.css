@@ -3,7 +3,6 @@
 
 @theme {
 	--font-sans: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--color-text: #555;
 }
 
 @layer base {

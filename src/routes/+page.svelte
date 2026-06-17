@@ -20,7 +20,7 @@
 			<h2 class="text-xl font-semibold mb-1">記事一覧</h2>
 			<nav class="flex flex-col gap-2">
 				{#each articles as article}
-					<ArticleCard {...article} />
+					<ArticleCard {article} />
 				{:else}
 					<p class="text-gray-500">
 						記事がありません。
