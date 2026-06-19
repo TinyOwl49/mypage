@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { asset, resolve } from "$app/paths";
 	import type { Article } from "$lib/article";
 	import { formatDate } from "$lib/date";
 
@@ -11,9 +12,16 @@
 
 <div class="rounded-lg p-4">
 	<div class="flex flex-row">
-		<a href={`/blog/${article.slug}`}>
+		<a
+			href={resolve("/blog/[slug]", {
+				slug: article.slug,
+			})}
+		>
 			<img
-				src={article.thumbnail}
+				src={asset(
+					article.thumbnail ||
+						"/default-thumbnail.png",
+				)}
 				alt={article.title}
 				class="w-32 h-32 object-cover rounded-lg mr-4"
 			/>
@@ -32,9 +40,14 @@
 				<div class="flex flex-wrap gap-2">
 					{#each article.tags as t}
 						<a
-							href="/blog/tags/{encodeURIComponent(
-								t,
-							)}/"
+							href={resolve(
+								"/tags/[tag]",
+								{
+									tag: encodeURIComponent(
+										t,
+									),
+								},
+							)}
 							class="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors"
 						>
 							#{t}

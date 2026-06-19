@@ -158,12 +158,12 @@ print("image was saved.")
 ```
 
 ### 画像
-![バーニングシップ・フラクタル1](/images/burning_fractal/1.png) 
-![バーニングシップ・フラクタル2](/images/burning_fractal/2.png)
-![バーニングシップ・フラクタル3](/images/burning_fractal/3.png)
-![バーニングシップ・フラクタル4](/images/burning_fractal/4.png)
-![バーニングシップ・フラクタル5](/images/burning_fractal/5.png)
-![バーニングシップ・フラクタル6](/images/burning_fractal/6.png)
+![バーニングシップ・フラクタル1](../../images/burning_fractal/1.png) 
+![バーニングシップ・フラクタル2](../../images/burning_fractal/2.png)
+![バーニングシップ・フラクタル3](../../images/burning_fractal/3.png)
+![バーニングシップ・フラクタル4](../../images/burning_fractal/4.png)
+![バーニングシップ・フラクタル5](../../images/burning_fractal/5.png)
+![バーニングシップ・フラクタル6](../../images/burning_fractal/6.png)
 
 きれい。マンデルブロ集合とは結構違った風景が見られます。  
 それぞれの座標は上から

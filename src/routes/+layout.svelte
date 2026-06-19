@@ -2,6 +2,7 @@
 	import "./layout.css";
 	import favicon from "$lib/assets/favicon.svg";
 	import "katex/dist/katex.min.css";
+	import { resolve } from "$app/paths";
 
 	let { children } = $props();
 </script>
@@ -12,8 +13,9 @@
 
 <div class="bg-gray-50 min-h-screen p-4 flex flex-col">
 	<header class="max-w-2xl w-full">
-		<a class="text-left text-2xl font-bold text-gray-800" href="/"
-			>猫</a
+		<a
+			class="text-left text-2xl font-bold text-gray-800"
+			href={resolve('/')}>猫</a
 		>
 	</header>
 	{@render children()}

@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { resolve } from "$app/paths";
 	import ArticleCard from "$lib/components/ArticleCard.svelte";
-	import { formatDate } from "$lib/date";
 
 	let { data } = $props();
 	const tag = $derived(data.tag);
@@ -23,7 +23,7 @@
 		</div>
 
 		<footer class="mt-12 pt-8 border-t border-gray-200">
-			<a href="/" class="text-blue-500 hover:underline">
+			<a href={resolve('/')} class="text-blue-500 hover:underline">
 				← ホームに戻る
 			</a>
 		</footer>
