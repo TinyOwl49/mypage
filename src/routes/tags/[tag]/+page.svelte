@@ -8,8 +8,8 @@
 </script>
 
 <div class="flex flex-col items-center">
-	<div class="w-full max-w-4xl p-4 md:p-8">
-		<h1 class="text-3xl font-bold text-gray-900 mb-2">
+	<div class="w-full max-w-2xl mt-8">
+		<h1 class="text-2xl font-bold text-gray-900 mb-2">
 			タグ: {tag}
 		</h1>
 		<p class="text-gray-500 mb-8">
@@ -18,7 +18,7 @@
 
 		<div class="space-y-6">
 			{#each articles as article}
-				<ArticleCard {article} />
+				<ArticleCard {article} showTags />
 			{/each}
 		</div>
 

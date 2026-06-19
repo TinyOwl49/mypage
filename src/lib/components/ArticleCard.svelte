@@ -10,7 +10,7 @@
 	let { article, showTags }: Props = $props();
 </script>
 
-<div class="rounded-lg p-4">
+<div class="rounded-lg p-4 hover:shadow-lg transition-shadow">
 	<div class="flex flex-row">
 		<a
 			href={resolve("/blog/[slug]", {
@@ -23,19 +23,25 @@
 						"/default-thumbnail.png",
 				)}
 				alt={article.title}
-				class="w-32 h-32 object-cover rounded-lg mr-4"
+				class="w-25 h-25 object-cover rounded-lg mr-4"
 			/>
 		</a>
-		<div class="px-2">
-			<h2 class="text-xl font-semibold mb-2">
-				{article.title}
-			</h2>
-			<p class="text-sm text-gray-500 mb-2">
-				{formatDate(new Date(article.date))}
-			</p>
-			<p class="text-gray-600 mb-4">
-				{article?.description}
-			</p>
+		<div class="flex-1">
+			<a
+				href={resolve("/blog/[slug]", {
+					slug: article.slug,
+				})}
+			>
+				<h2 class="text-xl font-semibold">
+					{article.title}
+				</h2>
+				<p class="text-sm text-gray-500 mb-1">
+					{formatDate(new Date(article.date))}
+				</p>
+				<p class="text-gray-700">
+					{article?.description}
+				</p>
+			</a>
 			{#if showTags && article.tags && article.tags.length > 0}
 				<div class="flex flex-wrap gap-2">
 					{#each article.tags as t}
