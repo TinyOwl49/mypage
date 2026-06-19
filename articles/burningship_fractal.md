@@ -6,6 +6,10 @@ tags: [programming, 数学]
 thumbnail: "/thumbnails/burningship_fractal.jpg"
 ---
 
+<script>
+  import ZoomableImage from '$lib/components/ZoomableImage.svelte';
+</script>
+
 
 ## バーニングシップ・フラクタルとは
 以下の複素数平面上での漸化式の極限が収束するか発散するかを調べます。  
@@ -158,12 +162,16 @@ print("image was saved.")
 ```
 
 ### 画像
-![バーニングシップ・フラクタル1](../../images/burning_fractal/1.png) 
-![バーニングシップ・フラクタル2](../../images/burning_fractal/2.png)
-![バーニングシップ・フラクタル3](../../images/burning_fractal/3.png)
-![バーニングシップ・フラクタル4](../../images/burning_fractal/4.png)
-![バーニングシップ・フラクタル5](../../images/burning_fractal/5.png)
-![バーニングシップ・フラクタル6](../../images/burning_fractal/6.png)
+
+クリックして拡大できます  
+(読み込みに時間がかかる場合があります。)  
+
+<ZoomableImage src="../../images/burning_fractal/1.png" alt="バーニングシップ・フラクタル1" width="2560" height="1920"  />  
+<ZoomableImage src="../../images/burning_fractal/2.png" alt="バーニングシップ・フラクタル2" width="2560" height="1920"  />  
+<ZoomableImage src="../../images/burning_fractal/3.png" alt="バーニングシップ・フラクタル3" width="2560" height="1920"  />  
+<ZoomableImage src="../../images/burning_fractal/4.png" alt="バーニングシップ・フラクタル4" width="2560" height="1920"  />  
+<ZoomableImage src="../../images/burning_fractal/5.png" alt="バーニングシップ・フラクタル5" width="2560" height="1920"  />  
+<ZoomableImage src="../../images/burning_fractal/6.png" alt="バーニングシップ・フラクタル6" width="2560" height="1920"  />  
 
 きれい。マンデルブロ集合とは結構違った風景が見られます。  
 それぞれの座標は上から
@@ -172,7 +180,8 @@ print("image was saved.")
 - -1.74 + i0.02
 - -1.742364+i0.018916
 - -0.75682+i1.12772
-- -1.09296+i0.59039
+- -1.09296+i0.59039  
+
 です。
 
 ### 参考
