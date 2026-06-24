@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { formatDate } from "$lib/date";
-	import TableOfContents from "$lib/components/TableOfContents.svelte";
 	import { resolve } from "$app/paths";
 
 	let { data } = $props();
 	const post = $derived(data.post);
 	const ContentComponent = $derived(post.content);
 </script>
+
+<svelte:head>
+	<title>{post.title}</title>
+	<meta name="description" content={post.description} />
+</svelte:head>
 
 <div class="flex flex-col items-center">
 	<article

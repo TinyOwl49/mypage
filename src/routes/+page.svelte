@@ -4,6 +4,11 @@
 	const { articles } = getAllArticles();
 </script>
 
+<svelte:head>
+	<title>tinyowl blog</title>
+	<meta name="description" content="" />
+</svelte:head>
+
 <div class="bg-gray-50 flex flex-col items-center p-4">
 	<main class="flex flex-col items-start gap-8 mt-8 w-full max-w-2xl">
 		<div class="max-w-2xl w-full rounded-lg p-6">

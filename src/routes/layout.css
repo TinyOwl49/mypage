@@ -41,9 +41,10 @@
 
 /* Tailwind Typography (prose) overrides for Japanese typesetting */
 .prose {
-	max-width: 45rem;
+	max-width: 47rem;
 	/* approx 50-55 characters */
 	line-height: 1.8;
+	font-size: 1.0rem;
 }
 
 .prose h1,

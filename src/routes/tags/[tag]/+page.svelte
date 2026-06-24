@@ -7,6 +7,11 @@
 	const articles = $derived(data.articles);
 </script>
 
+<svelte:head>
+	<title>{tag}の記事一覧 | tinyowl's mypage</title>
+	<meta name="description" content={`tag: ${tag}`} />
+</svelte:head>
+
 <div class="flex flex-col items-center">
 	<div class="w-full max-w-2xl mt-8">
 		<h1 class="text-2xl font-bold text-gray-900 mb-2">

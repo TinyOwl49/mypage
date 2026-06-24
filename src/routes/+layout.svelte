@@ -15,13 +15,16 @@
 	<header class="max-w-2xl w-full float-left">
 		<a
 			class="text-left text-2xl font-bold text-gray-800"
-			href={resolve('/')}>猫</a
+			href={resolve("/")}
 		>
+			猫
+		</a>
 	</header>
 	{@render children()}
 	<footer
 		class="flex flex-col items-center p-4 mt-8 text-gray-400 text-sm"
 	>
-		&copy; {new Date().getFullYear()} tinyowl49's mypage . All rights reserved.
+		&copy; {new Date().getFullYear()} tinyowl49's mypage . All rights
+		reserved.
 	</footer>
 </div>

@@ -7,7 +7,7 @@ thumbnail: "/thumbnails/burningship_fractal.jpg"
 ---
 
 <script>
-  import ZoomableImage from '$lib/components/ZoomableImage.svelte';
+  import ZoomableImage from '$lib/mdx/ZoomableImage.svelte';
 </script>
 
 
@@ -162,7 +162,6 @@ print("image was saved.")
 ```
 
 ### 画像
-
 クリックして拡大できます  
 (読み込みに時間がかかる場合があります。)  
 
