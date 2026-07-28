@@ -1,0 +1,53 @@
+@use "css/prose";
+@use "css/variables" as *;
+
+:root {
+  @each $name, $value in $theme-colors {
+    --#{$name}-color: #{$value};
+  }
+
+  --main-width: 60%;
+}
+
+
+html {
+  /* かな詰め (Proportional Kana) */
+  font-feature-settings: "pkna";
+
+  background-color: var(--background-color);
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--primary-color);
+
+  /* テキストの折り返しとハイフン設定 */
+  line-break: strict;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  /* 垂直リズムの基本設定 (1.75 = 28px/16px) */
+  line-height: 1.75;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-feature-settings: "palt";
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--link-color);
+}
+
+hr {
+  color: var(--border-color);
+}

@@ -1,0 +1,53 @@
+---
+title: このブログについて
+description: このブログの誕生秘話です。
+date: 2026-05-01
+tags: [日記]
+thumbnail: /thumbnails/helloblog.png
+---
+
+## 自己紹介
+こんにちは。私は猫梟犬、そういう種類の犬です。  
+東北大学の工学部で主に物理学と情報科学を学んでいます。
+趣味はプログラミングとお絵描きです。
+
+## 使った技術
+
+このブログはSvelteKit+Typescriptで作られています。  
+SvelteはReactのようなUIライブラリで、SvelteKitはNext.jsやNuxt.jsと同じ立ち位置のフレームワークです。
+記法がシンプルで直感的なことや、コンパイラ次に最適化を施すため、Reactに比べて軽量という特徴があります。  
+私の好きなライブラリです。おすすめです。
+
+UIの設計にはTailwindCSSを使用しました。  
+classにスタイルを書いていく仕組みで、カスタマイズ性が高いです。
+最初は結構戸惑いましたが、慣れれば結構楽にUIを記述できて良いな思いました。
+
+Markdownパーサーにはmdsvexを使用しました。
+これはMDXというライブラリのSvelte版で、設定が簡単な上にSvelteコンポーネントを埋め込めるのが非常に良い点です。
+
+このサイトの作成にはCopilotの力を大いに借りました。  
+これがスゴすぎる。一瞬でこのサイトの枠組みを作ってくれました。
+僕がしたのはデザイン、一部のバグ修正、Github Pagesの設定ぐらいです。  
+でも、Github Educationの枠で使っているのですぐにトークン切れになってしまいます。  
+あと、やたらと古いバージョンのコードを書いて困りました。(特にSveltekitのコード)  
+コードの規則を明示的に書いておくべきなのですかね。
+
+$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$  
+
+hello
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.plot(x, y)
+plt.title("Sine Wave")
+plt.xlabel("x")
+plt.ylabel("sin(x)")
+plt.grid()
+plt.show()
+```
