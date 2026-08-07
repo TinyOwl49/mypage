@@ -6,48 +6,50 @@ tags: [日記]
 thumbnail: /thumbnails/helloblog.png
 ---
 
+<script>
+    import EmbedLink from '$lib/components/EmbedLink.svelte';
+	import { resolve } from "$app/paths";
+</script>
+
 ## 自己紹介
 こんにちは。私は猫梟犬、そういう種類の犬です。  
-東北大学の工学部で主に物理学と情報科学を学んでいます。
-趣味はプログラミングとお絵描きです。
+大学の工学部で主に物理学と情報科学を学んでいます。
+趣味はプログラミングとお絵描きです。  
+
+## 個人ブログを作った理由
+私の趣味を曝け出す場所が欲しかったからです。
+もちろん、SNSや有名どころのブログサービスを利用する手がありますが、
+もっと自由に何かを書いたり作ったりしてみたいと常々思っていたので、自分で作ることにしました。  
+あんまりピンとくるデザインが思いつかなかったので、見た目がいつか変わると思います。
 
 ## 使った技術
-
-このブログはSvelteKit+Typescriptで作られています。  
+このブログはSvelteKit + Typescript + SCSSで作られています。  
 SvelteはReactのようなUIライブラリで、SvelteKitはNext.jsやNuxt.jsと同じ立ち位置のフレームワークです。
-記法がシンプルで直感的なことや、コンパイラ次に最適化を施すため、Reactに比べて軽量という特徴があります。  
+記法がシンプルで直感的なことや、レンダリング時ではなくコンパイラ次に最適化を施すため、Reactに比べて軽量という特徴があります。  
 私の好きなライブラリです。おすすめです。
+<EmbedLink url="https://svelte.jp/" />
 
-UIの設計にはTailwindCSSを使用しました。  
-classにスタイルを書いていく仕組みで、カスタマイズ性が高いです。
-最初は結構戸惑いましたが、慣れれば結構楽にUIを記述できて良いな思いました。
+UIの設計にはSCSSを使用しました。CSSに変数や関数のような機能を追加したCSSの拡張言語です。  
+最初はTailwind CSSを使っていたのですが、逆に整ってないレイアウトにしたい気持ちが生えてきたのでSCSSに変えました。
+結果的にあんまり変わらない見た目になってしまった...  
+
 
 Markdownパーサーにはmdsvexを使用しました。
 これはMDXというライブラリのSvelte版で、設定が簡単な上にSvelteコンポーネントを埋め込めるのが非常に良い点です。
+```html
+<script>
+    import EmbedLink from '$lib/components/EmbedLink.svelte';
+</script>
 
-このサイトの作成にはCopilotの力を大いに借りました。  
-これがスゴすぎる。一瞬でこのサイトの枠組みを作ってくれました。
-僕がしたのはデザイン、一部のバグ修正、Github Pagesの設定ぐらいです。  
-でも、Github Educationの枠で使っているのですぐにトークン切れになってしまいます。  
-あと、やたらと古いバージョンのコードを書いて困りました。(特にSveltekitのコード)  
-コードの規則を明示的に書いておくべきなのですかね。
-
-$$
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
-$$  
-
-hello
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-plt.plot(x, y)
-plt.title("Sine Wave")
-plt.xlabel("x")
-plt.ylabel("sin(x)")
-plt.grid()
-plt.show()
+**埋め込みリンク** を使用できる
+<EmbedLink url="https://mdsvex.com/" />
 ```
+みたいなことができます。  
+
+デプロイ先にはVercelを選びました。
+元々はGithub Pagesを使っていたのですが、VercelだとSveltekitのSSRが使える、すなわちサーバーサイドの実装ができるので、今後の拡張性を考えて選びました。
+かなり使いやすい上に、噂通り表示が早いです。
+<EmbedLink url="https://vercel.com/tiny-owl" />
+
+## 最後に
+ぼちぼち更新していきたいと思います。

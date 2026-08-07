@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from "$app/state";
 	import { resolve } from "$app/paths";
 	import favicon from "$lib/assets/favicon.svg";
 	import "../app.scss";
@@ -13,10 +14,29 @@
 
 <header>
 	<div class="header-links">
-		<a href={resolve("/")}>Home</a>
-		<a href={resolve("/about/")}>About</a>
-		<a href={resolve("/blog/")}>Blog</a>
-		<a href={resolve("/test/")}>Test</a>
+		<a
+			href={resolve("/")}
+			class:active={page.url.pathname === resolve("/")}
+			>Home</a
+		>
+		<a
+			href={resolve("/about/")}
+			class:active={page.url.pathname.startsWith(
+				resolve("/about/"),
+			)}>About</a
+		>
+		<a
+			href={resolve("/blog/")}
+			class:active={page.url.pathname.startsWith(
+				resolve("/blog/"),
+			)}>Blog</a
+		>
+		<a
+			href={resolve("/photo/")}
+			class:active={page.url.pathname.startsWith(
+				resolve("/photo/"),
+			)}>Photo</a
+		>
 	</div>
 </header>
 
@@ -41,10 +61,19 @@
 		border-bottom: 1px solid var(--border-color);
 	}
 	a {
-		color: var(--primary-color);
+		color: var(--secondary-color);
 		font-size: 1.2rem;
 		font-weight: bold;
 		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+
+		&:hover {
+			color: var(--primary-color);
+		}
+
+		&.active {
+			color: var(--primary-color);
+		}
 	}
 	footer {
 		display: flex;

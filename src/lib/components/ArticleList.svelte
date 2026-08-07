@@ -26,7 +26,7 @@
 		@if small {
 			gap: 0.5rem;
 		}
-		else {
+		@else {
 			gap: 1rem;
 		}
 	}

@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { resolve } from "$app/paths";
+	import { asset, resolve } from "$app/paths";
 	import ArticleList from "$lib/components/ArticleList.svelte";
-	import Minecraft from "$lib/components/Minecraft.svelte";
 	import NightStars from "$lib/components/NightStars.svelte";
 </script>
 
@@ -10,9 +9,14 @@
 	<meta name="description" content="猫梟犬のマイページです" />
 </svelte:head>
 
+<NightStars />
 <main>
 	<div class="me">
-		<img class="me__icon" src="imgs/icon.jpg" alt="icon" />
+		<img
+			class="me__icon"
+			src={asset("/imgs/icon.jpg")}
+			alt="猫梟犬のアイコン"
+		/>
 		<div>
 			<h1 class="me__title">猫梟犬</h1>
 			<p class="me__description">
@@ -29,18 +33,57 @@
 	<div class="content">
 		<div class="article">
 			<h2 class="text-center">ブログ記事</h2>
-			<div></div>
 			<ArticleList small />
+			<span><a href={resolve("/blog")}> → 一覧 </a></span>
 		</div>
 		<div class="split-vertical-line"></div>
-		<div class="other">
-			<h2 class="text-center">Hello</h2>
-			<Minecraft />
+		<div class="creation">
+			<h2 class="text-center">最近作ったもの</h2>
+			<div class="creation__list">
+				<a
+					href="https://tinyowl49.github.io/sound-sphere/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<div class="creation__list_item">
+						<img
+							class="creation__list__img"
+							width="80"
+							src={asset(
+								"/imgs/creation/sound_sphere.gif",
+							)}
+							alt="sound_sphere"
+						/>
+						<div
+							class="creation__list__description"
+						>
+							<i>Sound Sphere</i>
+							<p>
+								曲の形を表現します
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<hr />
+			<h2 class="text-center">最近のフォト</h2>
+			<div class="creation__list">
+				<a href={resolve("/photo/")}>
+					<div class="creation__list_item">
+						<img
+							class="creation__list__img creation__photo"
+							width="140"
+							src={asset(
+								"/imgs/photo/soradane3.gif",
+							)}
+							alt="最近の写真"
+						/>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
-	<div></div>
 </main>
-<NightStars />
 
 <style lang="scss">
 	main {
@@ -88,13 +131,49 @@
 
 	$article-width: 65%;
 	.article {
-		margin: 0 15px 30px 15px;
+		margin: 0 20px 30px 20px;
 		width: $article-width;
 	}
 
-	.other {
+	.creation {
 		width: calc(100% - #{$article-width});
-		margin: 0 15px;
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin: 0 15px;
+		}
+
+		&__list a {
+			text-decoration: none;
+		}
+
+		&__list_item {
+			display: flex;
+			gap: 20px;
+		}
+
+		&__list__img {
+			border-radius: 10px;
+			border: 1px solid var(--border-color);
+		}
+
+		&__list__img:hover {
+			transform: scale(1.1);
+			transition: transform 0.3s ease-in-out;
+		}
+
+		&__list__description {
+			p {
+				font-size: 0.8rem;
+				color: var(--primary-color);
+			}
+		}
+
+		&__photo {
+			margin: 0 auto 20px auto;
+		}
 	}
 
 	.split-vertical-line {

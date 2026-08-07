@@ -34,6 +34,7 @@
 		"vite": "^8.0.16"
 	},
 	"dependencies": {
-		"open-graph-scraper": "^6.12.0"
+		"open-graph-scraper": "^6.12.0",
+		"photoswipe": "^5.4.4"
 	}
 }

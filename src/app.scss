@@ -51,3 +51,19 @@ a {
 hr {
   color: var(--border-color);
 }
+
+.head-title {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  hr {
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+  }
+}
