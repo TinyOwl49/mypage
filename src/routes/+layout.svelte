@@ -2,6 +2,12 @@
 	import { page } from "$app/state";
 	import { resolve } from "$app/paths";
 	import favicon from "$lib/assets/favicon.svg";
+	import {
+		SITE_NAME,
+		SITE_DESCRIPTION,
+		SITE_URL,
+		DEFAULT_OG_IMAGE,
+	} from "$lib";
 	import "../app.scss";
 	import "katex/dist/katex.min.css";
 
@@ -10,6 +16,13 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content={SITE_NAME} />
+	<meta property="og:title" content={SITE_NAME} />
+	<meta property="og:description" content={SITE_DESCRIPTION} />
+	<meta property="og:image" content={DEFAULT_OG_IMAGE} />
+	<meta property="og:url" content={`${SITE_URL}${page.url.pathname}`} />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <header>
