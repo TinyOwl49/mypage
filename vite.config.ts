@@ -6,8 +6,8 @@ export default defineConfig({
 	plugins: [
 		sveltekit(),
 		svelteSitemap({
-
-			domain: 'https://github.com/TinyOwl49/mypage'
+			domain: 'https://github.com/TinyOwl49/mypage',
+			outDir: '.vercel/output/static'
 		})
 	],
 

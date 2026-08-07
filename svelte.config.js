@@ -18,13 +18,8 @@ const config = {
 	},
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null
-		}),
-		paths: {
-			base: '/mypage'
-		}
+			runtime: 'nodejs22.x'
+		})
 	},
 	preprocess: [
 		vitePreprocess(),
