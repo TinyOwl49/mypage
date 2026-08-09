@@ -98,7 +98,6 @@
 		display: flex;
 		align-items: center;
 		gap: 25px;
-		width: 100%;
 		margin: 20px 25px;
 
 		&__title {
@@ -183,5 +182,49 @@
 
 	.text-center {
 		text-align: center;
+	}
+
+	@media (max-width: 640px) {
+		main {
+			width: 100%;
+			border-radius: 20px;
+		}
+
+		.me {
+			gap: 15px;
+			margin: 20px 15px;
+
+			&__icon {
+				width: 80px;
+				height: 80px;
+			}
+
+			&__title {
+				font-size: 1.5rem;
+			}
+		}
+
+		.content {
+			flex-direction: column;
+		}
+
+		.article {
+			width: auto;
+			margin: 0 15px 20px 15px;
+		}
+
+		.creation {
+			width: auto;
+
+			&__list {
+				margin: 0;
+			}
+		}
+
+		.split-vertical-line {
+			width: auto;
+			height: 2px;
+			margin: 0 15px 20px 15px;
+		}
 	}
 </style>

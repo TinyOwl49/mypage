@@ -95,4 +95,18 @@
 		color: var(--secondary-color);
 		font-size: 0.8rem;
 	}
+
+	@media (max-width: 640px) {
+		header {
+			margin-bottom: 2.5rem;
+		}
+		.header-links {
+			width: 100%;
+			justify-content: space-between;
+			gap: 1rem;
+		}
+		a {
+			font-size: 1rem;
+		}
+	}
 </style>

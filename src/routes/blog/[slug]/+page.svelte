@@ -53,6 +53,13 @@
 
 	.article-content {
 		font-size: 1.03rem;
+
+		/* Markdown本文の画像（<p>に包まれるもの）のみを対象にし、
+		   EmbedLinkなど独自レイアウトを持つコンポーネント内の画像には影響させない */
+		:global(p > img) {
+			max-width: 100%;
+			height: auto;
+		}
 	}
 
 	.head {
@@ -70,9 +77,24 @@
 		&__tags {
 			display: flex;
 			gap: 0.7rem;
+			flex-wrap: wrap;
 		}
 		&__link {
 			color: var(--link-color);
+		}
+	}
+
+	@media (max-width: 640px) {
+		main {
+			width: 100%;
+		}
+
+		.head {
+			margin-bottom: 3rem;
+			&__title {
+				font-size: 1.5rem;
+				margin-bottom: 1.2rem;
+			}
 		}
 	}
 </style>

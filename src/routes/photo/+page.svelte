@@ -168,6 +168,13 @@
 		min-height: 80vh;
 	}
 
+	@media (max-width: 640px) {
+		.book {
+			width: 100%;
+			min-height: auto;
+		}
+	}
+
 	.book__arrow {
 		position: absolute;
 		top: 50%;
@@ -219,6 +226,7 @@
 
 	.gallery {
 		position: relative;
+		box-sizing: border-box;
 		width: 100%;
 		height: 65vh;
 		padding: 3rem 3.5rem;
@@ -259,16 +267,12 @@
 	@media (max-width: 640px) {
 		.gallery {
 			grid-template-columns: 1fr;
+			height: auto;
+			min-height: 50vh;
 			padding: 2.5rem 1.5rem;
 		}
 		.gallery::before {
 			display: none;
-		}
-		.gallery__item {
-			grid-column: auto;
-			grid-row: auto;
-			flex-direction: column;
-			align-items: flex-start;
 		}
 		.book__arrow--prev {
 			left: -0.75rem;
@@ -381,5 +385,27 @@
 		display: block;
 		width: 100%;
 		height: auto;
+	}
+
+	// :nth-child(4n+1)などの個別指定は詳細度が高く、上のモバイル用メディアクエリの
+	// .gallery__item { grid-column / grid-row / flex-direction } を上書きしてしまうため、
+	// ここで同等の詳細度(:nth-child(n))を使って1カラム縦積みを確実に効かせる
+	@media (max-width: 640px) {
+		.gallery__item:nth-child(n) {
+			grid-column: 1;
+			grid-row: auto;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		// flex-directionをcolumnにすると、flex-basis(160px)の意味が
+		// 「幅」から「高さ」に変わり枠が縦に間延びしてしまうため、
+		// 縦積み用に幅基準のサイズ指定へ切り替える
+		.gallery__item > :global(div) {
+			flex: 0 0 auto;
+			width: 200px;
+			max-width: 100%;
+			max-height: none;
+		}
 	}
 </style>
