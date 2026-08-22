@@ -8,13 +8,36 @@
 			alt: "サーバルちゃん",
 			href: "https://kemono-friends.jp/",
 		},
-		{ src: "/imgs/mysuteki/gawrgura.jpg", alt: "Gawr Gura" },
-		{ src: "/imgs/mysuteki/ninomae_inanis.jpg", alt: "Ninomae Inanis" },
-		{ src: "/imgs/mysuteki/minecraft.jpg", alt: "Minecraft" },
-		{ src: "/imgs/mysuteki/neovim.svg", alt: "Neovim" },
-		{ src: "/imgs/mysuteki/omori.jpg", alt: "OMORI" },
-		{ src: "/imgs/mysuteki/oneshot.jpg", alt: "OneShot" },
-		{ src: "/imgs/mysuteki/rust.png", alt: "Rust" },
+		{
+			src: "/imgs/mysuteki/gawrgura.jpg",
+			alt: "Gawr Gura",
+			href: "https://www.youtube.com/@GawrGura",
+		},
+		{
+			src: "/imgs/mysuteki/ninomae_inanis.jpg",
+			alt: "Ninomae Inanis",
+			href: "https://www.youtube.com/channel/UCMwGHR0BTZuLsmjY_NT5Pwg",
+		},
+		{
+			src: "/imgs/mysuteki/minecraft.jpg",
+			alt: "Minecraft",
+		},
+		{
+			src: "/imgs/mysuteki/neovim.svg",
+			alt: "Neovim",
+
+			href: "https://neovim.io/",
+		},
+		{
+			src: "/imgs/mysuteki/omori.jpg",
+			alt: "OMORI",
+			href: "https://store.steampowered.com/app/1150690/OMORI/?l=japanese",
+		},
+		{
+			src: "/imgs/mysuteki/oneshot.jpg",
+			alt: "OneShot",
+			href: "https://store.steampowered.com/app/420530/OneShot/?l=japanese",
+		},
 	];
 </script>
 
@@ -31,7 +54,8 @@
 			<h1 class="profile__title">猫梟犬</h1>
 			<p class="profile__description">
 				東北大学の学生です。 数学, 物理,
-				コンピュータが好きです。<br />
+				コンピュータが好きです。 専攻は情報工学です。<br
+				/>
 			</p>
 		</div>
 	</div>
@@ -63,7 +87,7 @@
 	</div>
 
 	<div>
-		<h2>好きなもの</h2>
+		<h2>好き</h2>
 		<div class="mysuteki">
 			<div class="mysuteki__track">
 				{#each [...mysutekiItems, ...mysutekiItems] as item}

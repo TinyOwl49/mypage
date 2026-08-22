@@ -1,0 +1,80 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "org",
+	"scopeName": "source.org",
+	"patterns": [
+		{ "include": "#comment" },
+		{ "include": "#src-block" },
+		{ "include": "#directive" },
+		{ "include": "#headline" },
+		{ "include": "#table-row" },
+		{ "include": "#list-item" },
+		{ "include": "#timestamp" },
+		{ "include": "#link" },
+		{ "include": "#inline-markup" }
+	],
+	"repository": {
+		"comment": {
+			"match": "^\\s*#(?!\\+)\\s.*$",
+			"name": "comment.line.number-sign.org"
+		},
+		"directive": {
+			"match": "^#\\+\\w+:.*$",
+			"name": "keyword.other.directive.org"
+		},
+		"src-block": {
+			"begin": "^(\\s*)(#\\+begin_src)\\s*(\\S+)?.*$",
+			"beginCaptures": {
+				"2": { "name": "keyword.control.org" },
+				"3": { "name": "entity.name.tag.language.org" }
+			},
+			"end": "^(\\s*)(#\\+end_src)\\s*$",
+			"endCaptures": {
+				"2": { "name": "keyword.control.org" }
+			},
+			"name": "markup.raw.block.org"
+		},
+		"headline": {
+			"match": "^(\\*+)\\s+(TODO|DONE|DOING|CANCELLED|WAITING|NEXT)?\\s*(\\[#[A-C]\\])?\\s*(.*?)\\s*(:[\\w:]+:)?\\s*$",
+			"captures": {
+				"1": { "name": "punctuation.definition.heading.org markup.heading.org" },
+				"2": { "name": "keyword.control.todo.org" },
+				"3": { "name": "constant.other.priority.org" },
+				"4": { "name": "entity.name.section.org" },
+				"5": { "name": "entity.other.attribute-name.tag.org" }
+			}
+		},
+		"table-row": {
+			"match": "^\\s*\\|.*\\|\\s*$",
+			"name": "markup.other.table.org"
+		},
+		"list-item": {
+			"match": "^(\\s*)([-+*]|\\d+[.)])\\s+(\\[[ Xx-]\\])?",
+			"captures": {
+				"2": { "name": "punctuation.definition.list.begin.org" },
+				"3": { "name": "constant.other.checkbox.org" }
+			}
+		},
+		"timestamp": {
+			"match": "[<\\[]\\d{4}-\\d{2}-\\d{2}[^>\\]]*[>\\]]",
+			"name": "constant.other.time.org"
+		},
+		"link": {
+			"match": "\\[\\[([^\\]]+)\\](\\[([^\\]]+)\\])?\\]",
+			"captures": {
+				"1": { "name": "markup.underline.link.org" },
+				"3": { "name": "string.other.link.description.org" }
+			}
+		},
+		"inline-markup": {
+			"patterns": [
+				{ "match": "\\*[^\\s*][^*]*\\*", "name": "markup.bold.org" },
+				{ "match": "/[^\\s/][^/]*/", "name": "markup.italic.org" },
+				{ "match": "_[^\\s_][^_]*_", "name": "markup.underline.org" },
+				{ "match": "=[^\\s=][^=]*=", "name": "markup.raw.inline.org" },
+				{ "match": "~[^\\s~][^~]*~", "name": "markup.raw.inline.org" },
+				{ "match": "\\+[^\\s+][^+]*\\+", "name": "markup.strikethrough.org" }
+			]
+		}
+	}
+}

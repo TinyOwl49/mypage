@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { asset } from "$app/paths";
-    import NightStars from "$lib/components/NightStars.svelte";
+	import NightStars from "$lib/components/NightStars.svelte";
 	import ZoomableImage from "$lib/components/ZoomableImage.svelte";
 
 	type Photo = {

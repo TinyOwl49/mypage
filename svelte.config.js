@@ -4,10 +4,11 @@ import { createHighlighter } from 'shiki';
 import rehypeKatexSvelte from 'rehype-katex-svelte';
 import remarkMath from 'remark-math';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import orgLang from './src/lib/shiki/org.tmLanguage.json' with { type: 'json' };
 
 const highlighter = await createHighlighter({
 	themes: ['tokyo-night'],
-	langs: ['javascript', 'typescript', 'python', 'bash', 'css', 'html', 'json', 'yaml', 'markdown']
+	langs: ['javascript', 'typescript', 'python', 'bash', 'css', 'html', 'json', 'yaml', 'markdown', 'lisp', orgLang]
 });
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -29,7 +30,10 @@ const config = {
 			rehypePlugins: [rehypeKatexSvelte],
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
-					const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'tokyo-night' }));
+					const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'tokyo-night' })).replace(
+						/\\/g,
+						'\\\\'
+					);
 					return `{@html \`${html}\` }`;
 				}
 			}
