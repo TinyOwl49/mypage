@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { asset, resolve } from "$app/paths";
+	import { SITE_DESCRIPTION, SITE_NAME } from "$lib";
 	import ArticleList from "$lib/components/ArticleList.svelte";
 	import NightStars from "$lib/components/NightStars.svelte";
 </script>
@@ -7,6 +8,8 @@
 <svelte:head>
 	<title>fukuneko mypage</title>
 	<meta name="description" content="猫梟犬のマイページです" />
+	<meta name="og:title" content={SITE_NAME} />
+	<meta name="og:description" content={SITE_DESCRIPTION} />
 </svelte:head>
 
 <NightStars />

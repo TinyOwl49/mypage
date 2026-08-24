@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { asset } from "$app/paths";
+	import { SITE_DESCRIPTION } from "$lib";
 	import NightStars from "$lib/components/NightStars.svelte";
 	import ZoomableImage from "$lib/components/ZoomableImage.svelte";
 
@@ -119,6 +120,13 @@
 		page = Math.min(pageCount - 1, page + 1);
 	}
 </script>
+
+<svelte:head>
+	<title>私のPhoto</title>
+	<meta name="description" content="写真集" />
+	<meta name="og:title" content="私のPhoto" />
+	<meta name="og:description" content={SITE_DESCRIPTION} />
+</svelte:head>
 
 <NightStars />
 <div class="book">

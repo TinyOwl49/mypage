@@ -2,6 +2,13 @@
 	import ArticleList from "$lib/components/ArticleList.svelte";
 </script>
 
+<svelte:head>
+	<title>記事一覧</title>
+	<meta name="description" content="" />
+	<meta name="og:title" content="記事一覧" />
+	<meta name="og:description" content="" />
+</svelte:head>
+
 <main>
 	<div class="head-title">
 		<h1>記事一覧</h1>

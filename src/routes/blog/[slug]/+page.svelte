@@ -10,6 +10,8 @@
 <svelte:head>
 	<title>{post.title}</title>
 	<meta name="description" content={post.description} />
+	<meta name="og:title" content={post.title} />
+	<meta name="og:description" content={post.description} />
 </svelte:head>
 
 <main>

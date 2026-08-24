@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from "$app/paths";
+	import { SITE_DESCRIPTION } from "$lib";
 	import ArticleCard from "$lib/components/ArticleCard.svelte";
 
 	let { data } = $props();
@@ -8,8 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>{tag}の記事一覧 | fukuneko's mypage</title>
+	<title>{tag}の記事一覧</title>
 	<meta name="description" content={`tag: ${tag}`} />
+	<meta name="og:title" content={`${tag}の記事一覧`} />
+	<meta name="og:description" content={SITE_DESCRIPTION} />
 </svelte:head>
 
 <main>

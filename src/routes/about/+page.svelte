@@ -41,6 +41,13 @@
 	];
 </script>
 
+<svelte:head>
+	<title>About Me</title>
+	<meta name="description" content="自己紹介！" />
+	<meta name="og:title" content="About Me" />
+	<meta name="og:description" content="自己紹介！" />
+</svelte:head>
+
 <NightStars />
 
 <main>
@@ -53,8 +60,8 @@
 		<div>
 			<h1 class="profile__title">猫梟犬</h1>
 			<p class="profile__description">
-				東北大学の学生です。 数学, 物理,
-				コンピュータが好きです。 専攻は情報工学です。<br
+				大学生です。 数学, 物理,
+				コンピュータが好きです。 専攻は情報科学です。<br
 				/>
 			</p>
 		</div>
