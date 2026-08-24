@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	// TODO: faviconを変える
+	<!-- TODO: faviconを変える -->
 	<link rel="icon" href={DEFAULT_OG_IMAGE} />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content={SITE_NAME} />
