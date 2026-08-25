@@ -33,11 +33,6 @@
 			alt: "OMORI",
 			href: "https://store.steampowered.com/app/1150690/OMORI/?l=japanese",
 		},
-		{
-			src: "/imgs/mysuteki/oneshot.jpg",
-			alt: "OneShot",
-			href: "https://store.steampowered.com/app/420530/OneShot/?l=japanese",
-		},
 	];
 </script>
 
@@ -91,41 +86,6 @@
 				class="linklist__icon"
 			/>
 		</a>
-	</div>
-
-	<div>
-		<h2>好き</h2>
-		<div class="mysuteki">
-			<div class="mysuteki__track">
-				{#each [...mysutekiItems, ...mysutekiItems] as item}
-					<div class="mysuteki__item">
-						{#if item.href}
-							<a
-								href={item.href}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									src={asset(
-										item.src,
-									)}
-									alt={item.alt}
-									class="mysuteki__icon"
-								/>
-							</a>
-						{:else}
-							<img
-								src={asset(
-									item.src,
-								)}
-								alt={item.alt}
-								class="mysuteki__icon"
-							/>
-						{/if}
-					</div>
-				{/each}
-			</div>
-		</div>
 	</div>
 </main>
 
@@ -209,56 +169,6 @@
 		}
 		50% {
 			transform: translateY(-6px) rotate(-8deg);
-		}
-	}
-
-	.mysuteki {
-		overflow: hidden;
-		width: 70%;
-		margin: 0 auto;
-		&__track {
-			display: flex;
-			width: max-content;
-			gap: 2rem;
-			padding: 0.5rem 0;
-			animation: marquee 30s linear infinite;
-		}
-
-		&__item {
-			flex: 0 0 auto;
-		}
-
-		&__icon {
-			display: block;
-			height: 250px;
-			object-fit: cover;
-			border-radius: 8px;
-		}
-	}
-
-	@media (max-width: 640px) {
-		.mysuteki {
-			width: 90%;
-			&__icon {
-				height: 150px;
-			}
-		}
-	}
-
-	@keyframes marquee {
-		from {
-			transform: translateX(0);
-		}
-		to {
-			transform: translateX(-50%);
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.linklist__icon,
-		.linklist__item:hover .linklist__icon,
-		.mysuteki__track {
-			animation: none;
 		}
 	}
 </style>
