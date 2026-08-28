@@ -39,6 +39,12 @@
 			)}>Blog</a
 		>
 		<a
+			href={resolve("/diary/")}
+			class:active={page.url.pathname.startsWith(
+				resolve("/diary/"),
+			)}>Diary</a
+		>
+		<a
 			href={resolve("/photo/")}
 			class:active={page.url.pathname.startsWith(
 				resolve("/photo/"),

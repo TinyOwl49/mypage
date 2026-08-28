@@ -1,0 +1,12 @@
+---
+title: Org Modeの環境を整えた
+description: Org Mode周りを色々と整えたメモです。
+date: 2026-08-22
+tags: [日記, Programming]
+thumbnail: /thumbnails/EmacsIcon.svg
+---
+
+## Org Mode
+
+## iPhoneとの連携
+
