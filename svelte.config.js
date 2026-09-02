@@ -29,11 +29,42 @@ const config = {
 			remarkPlugins: [remarkMath],
 			rehypePlugins: [rehypeKatexSvelte],
 			highlight: {
-				highlighter: async (code, lang = 'text') => {
-					const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'tokyo-night' })).replace(
-						/\\/g,
-						'\\\\'
-					);
+				// `meta` は ```lang のフェンス行で言語名の後ろに書いた文字列。
+				//   ```ts title="src/foo.ts"      (title= / filename= / file=)
+				//   ```ts:src/foo.ts
+				highlighter: async (code, lang = 'text', meta) => {
+					let filename = null;
+
+					if (lang && lang.includes(':')) {
+						const [realLang, ...rest] = lang.split(':');
+						lang = realLang || 'text';
+						filename = rest.join(':') || null;
+					}
+
+					if (!filename && meta) {
+						const m =
+							meta.match(/(?:title|filename|file)\s*=\s*"([^"]+)"/) ||
+							meta.match(/(?:title|filename|file)\s*=\s*(\S+)/);
+						if (m) filename = m[1];
+					}
+
+					lang = lang || 'text';
+
+					const escapeHtml = (s) =>
+						s
+							.replace(/&/g, '&amp;')
+							.replace(/</g, '&lt;')
+							.replace(/>/g, '&gt;')
+							.replace(/"/g, '&quot;');
+
+					const highlighted = highlighter.codeToHtml(code, { lang, theme: 'tokyo-night' });
+					const inner = filename
+						? `<div class="code-block"><div class="code-block__filename">${escapeHtml(
+								filename
+							)}</div>${highlighted}</div>`
+						: highlighted;
+
+					const html = escapeSvelte(inner).replace(/\\/g, '\\\\');
 					return `{@html \`${html}\` }`;
 				}
 			}

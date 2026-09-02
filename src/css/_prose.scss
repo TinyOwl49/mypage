@@ -34,3 +34,25 @@
   font-size: 0.875rem;
   line-height: 1.7;
 }
+
+/* ファイル名付きコードブロック */
+.code-block {
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.code-block__filename {
+  padding: 0.4rem 1rem;
+  background-color: #1a1b26; /* tokyo-night の背景色 */
+  border-bottom: 1px solid var(--border-color);
+  color: var(--secondary-color);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+}
+
+.code-block .shiki {
+  margin: 0;
+  border-radius: 0;
+}
