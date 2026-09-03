@@ -8,7 +8,7 @@ import orgLang from './src/lib/shiki/org.tmLanguage.json' with { type: 'json' };
 
 const highlighter = await createHighlighter({
 	themes: ['tokyo-night'],
-	langs: ['javascript', 'typescript', 'python', 'bash', 'css', 'html', 'json', 'yaml', 'markdown', 'lisp', orgLang]
+	langs: ['javascript', 'typescript', 'python', 'bash', 'css', 'html', 'json', 'yaml', 'markdown', 'lisp', 'haskell', orgLang]
 });
 
 /** @type {import('@sveltejs/kit').Config} */

@@ -7,6 +7,13 @@
 	import "katex/dist/katex.min.css";
 
 	let { children } = $props();
+
+	// 記事・日報ページではサムネイル画像をOGP画像として使う
+	const ogImage = $derived(
+		page.data?.post?.thumbnail
+			? `${SITE_URL}${page.data.post.thumbnail}`
+			: DEFAULT_OG_IMAGE,
+	);
 </script>
 
 <svelte:head>
@@ -14,7 +21,8 @@
 	<link rel="icon" href={DEFAULT_OG_IMAGE} />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content={SITE_NAME} />
-	<meta property="og:image" content={DEFAULT_OG_IMAGE} />
+	<meta property="og:image" content={ogImage} />
+	<meta name="twitter:image" content={ogImage} />
 	<meta property="og:url" content={`${SITE_URL}${page.url.pathname}`} />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

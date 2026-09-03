@@ -4,6 +4,7 @@ export type Diary = {
 	content: any; // Svelte コンポーネント
 	description: string;
 	date: string;
+	thumbnail?: string;
 };
 
 export async function getDiaryBySlug(slug: string) {
@@ -22,7 +23,8 @@ export async function getDiaryBySlug(slug: string) {
 			title: diary.metadata.title,
 			description: diary.metadata.description || '',
 			content: diary.default,
-			date: diary.metadata.date
+			date: diary.metadata.date,
+			thumbnail: diary.metadata.thumbnail || null
 		} as Diary;
 	} catch (e) {
 		console.error(`Error loading diary ${slug}:`, e);
@@ -43,7 +45,8 @@ export function getAllDiary(): { diaries: Diary[] } {
 			title: metadata.title,
 			description: metadata.description || '',
 			content: module.default,
-			date: metadata.date
+			date: metadata.date,
+			thumbnail: metadata.thumbnail || null
 		} as Diary;
 	});
 

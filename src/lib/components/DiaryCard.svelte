@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from "$app/paths";
+	import { asset, resolve } from "$app/paths";
 	import type { Diary } from "$lib/diary";
 	import { formatDate } from "$lib/date";
 
@@ -11,6 +11,16 @@
 </script>
 
 <div class="diary-card" class:small>
+	{#if diary.thumbnail}
+		<img
+			class="thumbnail"
+			class:small
+			src={asset(diary.thumbnail as any)}
+			alt={diary.title}
+		/>
+	{:else}
+		<div class="thumbnail thumbnail--empty" class:small aria-hidden="true"></div>
+	{/if}
 	<a
 		class="link"
 		href={resolve(`/diary/[slug]`, { slug: diary.slug })}
@@ -37,6 +47,7 @@
 		padding: 10px 20px;
 		border: 1px solid var(--border-color);
 		border-radius: 5px;
+		display: flex;
 
 		&:hover {
 			background-color: var(--hover-background-color);
@@ -58,6 +69,25 @@
 	.title {
 		font-size: 1.4rem;
 		margin: 0.2rem 0;
+	}
+
+	.thumbnail {
+		object-fit: cover;
+		border-radius: 5px;
+		flex-shrink: 0;
+
+		width: 120px;
+		height: 120px;
+		margin: auto 15px auto 0;
+		&.small {
+			width: 80px;
+			height: 80px;
+		}
+	}
+
+	// サムネイル未設定時のプレースホルダー（No Image の代わり）
+	.thumbnail--empty {
+		background-color: rgba(0, 0, 0, 0.18);
 	}
 
 	.description {
