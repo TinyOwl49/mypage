@@ -1,10 +1,18 @@
 @use "css/prose";
-@use "css/variables" as *;
 
 :root {
-  @each $name, $value in $theme-colors {
-    --#{$name}-color: #{$value};
-  }
+  --primary-color: #BDD3FF;
+  --secondary-color: #6975a2;
+  --link-color: #89A1FF;
+  --moon-color: #fff1b8;
+  // --background-color: #081d35;
+  // --background-color: #0f1e2e;
+  --background-color: #2b3345;
+  --hover-background-color: rgba(255, 255, 255, 0.05);
+  --border-color: #4e5e82;
+
+  --main-font: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --retro-font: "DotGothic16", "MS PGothic", "Osaka", "VT323", ui-monospace, monospace;
 
   --main-width: 60%;
 }
@@ -20,7 +28,8 @@ html {
 body {
   margin: 0;
   padding: 2rem;
-  font-family: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  // font-family: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--main-font);
   color: var(--primary-color);
 
   /* テキストの折り返しとハイフン設定 */
