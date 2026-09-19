@@ -85,7 +85,7 @@
 		}
 	}
 
-	// サムネイル未設定時のプレースホルダー（No Image の代わり）
+	// サムネイル未設定時のプレースホルダー
 	.thumbnail--empty {
 		background-color: rgba(0, 0, 0, 0.18);
 	}
