@@ -46,11 +46,6 @@
             class:active={page.url.pathname.startsWith(resolve("/diary/"))}
             >Diary</a
         >
-        <a
-            href={resolve("/photo/")}
-            class:active={page.url.pathname.startsWith(resolve("/photo/"))}
-            >Photo</a
-        >
     </div>
 </header>
 
@@ -69,6 +64,7 @@
     }
     .header-links {
         display: flex;
+        justify-content: center;
         width: var(--main-width);
         gap: 3rem;
         padding-bottom: 1rem;
