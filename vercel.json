@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "mypage-rho-lac.vercel.app" }],
+      "destination": "https://nyanowl.me/:path*",
+      "permanent": true
+    }
+  ]
+}
