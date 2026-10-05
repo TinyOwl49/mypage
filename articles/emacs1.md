@@ -9,7 +9,6 @@ thumbnail: /thumbnails/EmacsIcon.svg
 <script>
   import EmbedLink from '$lib/components/EmbedLink.svelte';
   import ZoomableImage from "$lib/components/ZoomableImage.svelte";
-  import { asset } from "$app/paths";
 </script>
 
 
@@ -74,7 +73,7 @@ lsp や org-mode がすぐ使えるのが嬉しい。
 今のところはこれで十分かなと思っています。
 ちなみに見た目はこんな感じです。
 
-<ZoomableImage src={asset("/imgs/articles/emacs-beginner/screen.webp")} alt="Emacs の画面" width="100%"/>
+<ZoomableImage src="https://img.nyanowl.me/articles/emacs-beginner/screen-917ee263.webp" alt="Emacs の画面" width="100%"/>
 
 ### Org mode 再び
 Org mode で勉強ノートを取りたかったので、LaTeX の設定を追加しました。
@@ -107,7 +106,7 @@ org-mode で以下のように LaTeX を使うことができます。
 数式をプレビューするとき C-c C-x C-l , 画像をプレビューするときは C-c C-x C-v です。  
 こんな感じに表示されます。
 
-<ZoomableImage src={asset("/imgs/articles/emacs-beginner/latex_sample.webp")} alt="Emacs LaTeX" width="100%"/>
+<ZoomableImage src="https://img.nyanowl.me/articles/emacs-beginner/latex_sample-fbb651f6.webp" alt="Emacs LaTeX" width="100%"/>
 
 ### 今の悩み
 - 起動が遅いのと、動作がもっさりしています。速度はしょうがない部分もあるみたいですが、たまにフリーズするのは直したい。

@@ -1,38 +1,5 @@
 <script>
     import { asset } from "$app/paths";
-
-    const mysutekiItems = [
-        {
-            src: "/imgs/mysuteki/sa-baru_chan.gif",
-            alt: "サーバルちゃん",
-            href: "https://kemono-friends.jp/",
-        },
-        {
-            src: "/imgs/mysuteki/gawrgura.jpg",
-            alt: "Gawr Gura",
-            href: "https://www.youtube.com/@GawrGura",
-        },
-        {
-            src: "/imgs/mysuteki/ninomae_inanis.jpg",
-            alt: "Ninomae Inanis",
-            href: "https://www.youtube.com/channel/UCMwGHR0BTZuLsmjY_NT5Pwg",
-        },
-        {
-            src: "/imgs/mysuteki/minecraft.jpg",
-            alt: "Minecraft",
-        },
-        {
-            src: "/imgs/mysuteki/neovim.svg",
-            alt: "Neovim",
-
-            href: "https://neovim.io/",
-        },
-        {
-            src: "/imgs/mysuteki/omori.jpg",
-            alt: "OMORI",
-            href: "https://store.steampowered.com/app/1150690/OMORI/?l=japanese",
-        },
-    ];
 </script>
 
 <svelte:head>

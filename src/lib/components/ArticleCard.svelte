@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { asset, resolve } from "$app/paths";
+	import { resolve } from "$app/paths";
+	import { imageSrc } from "$lib/image";
 	import type { Article } from "$lib/article";
 	import { formatDate } from "$lib/date";
 
@@ -15,7 +16,7 @@
 	<img
 		class="thumbnail"
 		class:small
-		src={asset(article.thumbnail as any)}
+		src={imageSrc(article.thumbnail as string)}
 		alt={article.title}
 	/>
 	<div>

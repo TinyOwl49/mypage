@@ -10,7 +10,7 @@
     // 記事・日報ページではサムネイル画像をOGP画像として使う
     const ogImage = $derived(
         page.data?.post?.thumbnail
-            ? `${SITE_URL}${page.data.post.thumbnail}`
+            ? new URL(page.data.post.thumbnail, SITE_URL).href
             : DEFAULT_OG_IMAGE,
     );
 </script>

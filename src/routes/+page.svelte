@@ -45,7 +45,7 @@
                         <img
                             class="creation__list__img"
                             width="80"
-                            src={asset("/imgs/creation/sound_sphere.gif")}
+                            src={asset("/imgs/creation/sound_sphere.webp")}
                             alt="sound_sphere"
                         />
                         <div class="creation__list__description">
