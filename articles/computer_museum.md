@@ -12,12 +12,12 @@ thumbnail: https://img.nyanowl.me/diary/2026/10-05/IMG_4566-914c71e6.webp
 </script>
 
 東北大学の青葉山キャンパスにはサイバーサイエンスセンターという建物があって、そこに分散コンピュータ博物館があります。
+<EmbedLink url="https://www.cc.tohoku.ac.jp/" />
 情報処理学会のページ眺めていてたまたま知りました。
-
-<EmbedLink url="https://www.cc.tohoku.ac.jp/museum/" />
+<EmbedLink url="https://museum.ipsj.or.jp/index.html" />
 
 昔使われていたスーパーコンピュータやパソコンが展示されています。かなり嬉しい。  
-昔東北大で使われていたNECのSXシリーズというスーパーコンピュータの部品が並べられていました。
+主にNECのSXシリーズというスーパーコンピュータの部品が並べられていました。
 
 集積回路ってかっこいい。
 <ZoomableImage src="https://img.nyanowl.me/articles/computer_museum/IMG_4566-914c71e6.webp" width="300" />
