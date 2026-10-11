@@ -79,7 +79,8 @@
 
     .profile {
         &__icon {
-            max-width: 400px;
+            max-width: 300px;
+            border-radius: 10px;
         }
         &__title {
             font-size: 1.5rem;

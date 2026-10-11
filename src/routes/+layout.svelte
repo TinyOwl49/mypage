@@ -62,6 +62,7 @@
         width: 100%;
         margin-bottom: 4rem;
     }
+
     .header-links {
         display: flex;
         justify-content: center;
@@ -70,6 +71,7 @@
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--border-color);
     }
+
     a {
         color: var(--secondary-color);
         font-size: 1.2rem;
@@ -86,6 +88,7 @@
             color: var(--primary-color);
         }
     }
+
     footer {
         display: flex;
         justify-content: center;
@@ -100,8 +103,8 @@
         }
         .header-links {
             width: 100%;
-            justify-content: space-between;
-            gap: 1rem;
+            justify-content: center;
+            gap: 3rem;
         }
         a {
             font-size: 1rem;
