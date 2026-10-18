@@ -35,13 +35,13 @@
 		const lightbox = new PhotoSwipeLightbox({
 			gallery: galleryElement,
 			children: "a",
-			// 動的インポート（必要なときだけコアモジュールを読み込み、ページの初期表示を軽くする）
+			// 動的インポート
 			pswpModule: () => import("photoswipe"),
 		});
 
 		lightbox.init();
 
-		// コンポーネント破棄時にメモリリークを防ぐ
+        // メモリーリーク対策
 		return () => {
 			lightbox.destroy();
 		};
