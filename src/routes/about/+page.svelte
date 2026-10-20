@@ -69,6 +69,13 @@
             />
         </a>
     </div>
+
+    <div class="favorite">
+        <a
+            href="https://music.youtube.com/playlist?list=PLMxJNfstQlp6tqqNx1p1GzT9-iPB3EaHJ"
+            >好きな曲</a
+        >
+    </div>
 </main>
 
 <style lang="scss">
