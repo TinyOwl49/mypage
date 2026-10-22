@@ -49,7 +49,7 @@
 
 <style lang="scss">
 	main {
-		width: 55%;
+		width: var(--main-width);
 		margin: 0 auto;
 	}
 
