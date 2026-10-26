@@ -62,6 +62,12 @@
 			max-width: 100%;
 			height: auto;
 		}
+
+		:global(.katex-display) {
+			overflow-x: auto;
+			overflow-y: hidden;
+			padding: 0.2rem 0;
+		}
 	}
 
 	.head {
@@ -89,6 +95,12 @@
 	@media (max-width: 640px) {
 		main {
 			width: 100%;
+		}
+
+		.article-content :global(.katex-display > .katex > .katex-html > .tag) {
+			position: static;
+			display: inline-block;
+			margin-left: 1em;
 		}
 
 		.head {

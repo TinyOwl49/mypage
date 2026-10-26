@@ -75,6 +75,11 @@
             href="https://music.youtube.com/playlist?list=PLMxJNfstQlp6tqqNx1p1GzT9-iPB3EaHJ"
             >好きな曲</a
         >
+        <a
+            href="https://www.youtube.com/watch?v=0b75cl4-qRE&list=PLMxJNfstQlp5dxeH_ORbG2CCRVGQcbe0S"
+        >
+            好きな動画
+        </a>
     </div>
 </main>
 

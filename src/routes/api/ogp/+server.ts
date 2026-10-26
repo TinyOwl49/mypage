@@ -11,7 +11,15 @@ export const GET: RequestHandler = async ({ url }) => {
 	}
 
 	try {
-		const { result, error } = await ogs({ url: targetUrl });
+		const { result, error } = await ogs({
+			url: targetUrl,
+			fetchOptions: {
+				headers: {
+					'accept-language': 'ja,en;q=0.8',
+					'user-agent': 'Mozilla/5.0'
+				}
+			}
+		});
 
 		if (error) {
 			throw new Error('OGPデータの取得に失敗しました');
