@@ -33,29 +33,6 @@
             <ArticleList small />
             <span><a href={resolve("/blog")}> → 一覧 </a></span>
         </div>
-        <div class="creation">
-            <h2>最近作ったもの</h2>
-            <div class="creation__list">
-                <a
-                    href="https://tinyowl49.github.io/sound-sphere/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <div class="creation__list_item">
-                        <img
-                            class="creation__list__img"
-                            width="80"
-                            src={asset("/imgs/creation/sound_sphere.webp")}
-                            alt="sound_sphere"
-                        />
-                        <div class="creation__list__description">
-                            <i>Sound Sphere</i>
-                            <p>曲の形を表現します</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
     </div>
 </main>
 
@@ -97,38 +74,6 @@
         width: $article-width;
     }
 
-    .creation {
-        width: calc(100% - #{$article-width});
-
-        &__list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 0 15px;
-        }
-        &__list a {
-            text-decoration: none;
-        }
-        &__list_item {
-            display: flex;
-            gap: 20px;
-        }
-        &__list__img {
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-        }
-        &__list__img:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        &__list__description {
-            p {
-                font-size: 0.8rem;
-                color: var(--primary-color);
-            }
-        }
-    }
-
     @media (max-width: 640px) {
         main {
             width: 100%;
@@ -152,13 +97,6 @@
         .article {
             width: auto;
             margin: 0 15px 20px 15px;
-        }
-        .creation {
-            width: auto;
-
-            &__list {
-                margin: 0;
-            }
         }
     }
 </style>
