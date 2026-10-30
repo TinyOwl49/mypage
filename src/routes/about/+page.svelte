@@ -80,6 +80,7 @@
         >
             好きな動画
         </a>
+        <a href="https://www.nicovideo.jp/mylist/79417707"> 好きな動画2 </a>
     </div>
 </main>
 

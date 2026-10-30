@@ -2,6 +2,10 @@
     import { asset, resolve } from "$app/paths";
     import { SITE_DESCRIPTION, SITE_NAME } from "$lib";
     import ArticleList from "$lib/components/ArticleList.svelte";
+    import DiaryCard from "$lib/components/DiaryCard.svelte";
+
+    let { data } = $props();
+    let latestDiary = $derived(data.latestDiary);
 </script>
 
 <svelte:head>
@@ -28,9 +32,13 @@
     </div>
 
     <div class="content">
+        <div class="diary">
+            <h2>最近の日記</h2>
+            <DiaryCard diary={latestDiary} small />
+        </div>
         <div class="article">
             <h2>ブログ記事</h2>
-            <ArticleList small />
+            <ArticleList />
             <span><a href={resolve("/blog")}> → 一覧 </a></span>
         </div>
     </div>
@@ -38,7 +46,7 @@
 
 <style lang="scss">
     main {
-        width: var(--main-width);
+        width: 70%;
         margin: 0 auto;
     }
 
@@ -69,7 +77,7 @@
     }
 
     $article-width: 65%;
-    .article {
+    .article, .diary {
         margin: 0 20px 30px 20px;
         width: $article-width;
     }

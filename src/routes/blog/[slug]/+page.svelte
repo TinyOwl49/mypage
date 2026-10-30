@@ -54,7 +54,7 @@
 	}
 
 	.article-content {
-		font-size: 1.03rem;
+		font-size: 1.2rem;
 
 		/* Markdown本文の画像（<p>に包まれるもの）のみを対象にし、
 		   EmbedLinkなど独自レイアウトを持つコンポーネント内の画像には影響させない */

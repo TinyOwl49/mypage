@@ -74,7 +74,7 @@
 
     a {
         color: var(--secondary-color);
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: bold;
         font-family: var(--retro-font);
         text-decoration: none;

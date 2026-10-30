@@ -41,7 +41,7 @@
     }
 
     .article-content {
-        font-size: 1.03rem;
+        font-size: 1.2rem;
 
         :global(p > img) {
             max-width: 100%;

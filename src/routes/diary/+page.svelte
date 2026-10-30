@@ -19,7 +19,7 @@
 
 <style lang="scss">
     main {
-        width: var(--main-width);
+        width: 60%;
         margin: 0 auto;
     }
 
