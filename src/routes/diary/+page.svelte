@@ -1,5 +1,6 @@
 <script>
     import DiaryList from "$lib/components/DiaryList.svelte";
+    import NightStars from "$lib/components/NightStars.svelte";
 </script>
 
 <svelte:head>

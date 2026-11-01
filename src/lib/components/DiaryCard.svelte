@@ -47,7 +47,7 @@
 
     .diary-card {
         padding: 10px 20px;
-        border: 1px solid var(--border-color);
+        /* border: 1px solid var(--border-color); */
         border-radius: 5px;
         display: flex;
 

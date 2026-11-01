@@ -1,15 +1,13 @@
 @use "css/prose";
 
 :root {
-  --primary-color: #ddd;
+  --primary-color: #222;
   --secondary-color: #aac;
   --link-color: #89A1FF;
-  --moon-color: #fff1b8;
-  // --background-color: #081d35;
-  // --background-color: #0f1e2e;
-  --background-color: #222;
+  --moon-color: blue;
+  background-color: white;
   --hover-background-color: rgba(255, 255, 255, 0.3);
-  --border-color: #222;
+  --border-color: #aaa;
 
   --main-font: "M PLUS 1p", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --retro-font: "DotGothic16", "MS PGothic", "Osaka", "VT323", ui-monospace, monospace;
@@ -32,15 +30,12 @@ body {
   font-family: var(--main-font);
   color: var(--primary-color);
 
-  /* テキストの折り返しとハイフン設定 */
   line-break: strict;
   overflow-wrap: break-word;
   hyphens: auto;
 
-  /* 垂直リズムの基本設定 (1.75 = 28px/16px) */
   line-height: 1.75;
 }
-
 
 h1,
 h2,

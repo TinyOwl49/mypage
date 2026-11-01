@@ -16,21 +16,6 @@
 </svelte:head>
 
 <main>
-    <div class="me">
-        <img
-            class="me__icon"
-            src={asset("/imgs/icon.jpg")}
-            alt="猫梟犬のアイコン"
-        />
-        <div>
-            <h1 class="me__title">猫梟犬</h1>
-            <p class="me__description">
-                日本の大学生です。数学, 物理, コンピュータが好きです。<br />
-            </p>
-            <a class="me__to-about" href={resolve("/about")}>→ About Me</a>
-        </div>
-    </div>
-
     <div class="content">
         <div class="diary">
             <h2>最近の日記</h2>
@@ -50,34 +35,9 @@
         margin: 0 auto;
     }
 
-    .me {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        margin: 4rem 25px;
-        padding: 0;
-
-        &__title {
-            font-family: "Mochiy Pop One", sans-serif;
-            font-size: 2rem;
-            margin: 0;
-        }
-        &__description {
-            margin: 5px 0;
-        }
-        &__icon {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-        }
-        &__to-about {
-            text-decoration: none;
-            color: var(--moon-color);
-        }
-    }
-
     $article-width: 65%;
-    .article, .diary {
+    .article,
+    .diary {
         margin: 0 20px 30px 20px;
         width: $article-width;
     }
