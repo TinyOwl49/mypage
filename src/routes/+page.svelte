@@ -17,29 +17,37 @@
 
 <main>
     <div class="content">
-        <div class="diary">
-            <h2>最近の日記</h2>
-            <DiaryCard diary={latestDiary} small />
-        </div>
         <div class="article">
             <h2>ブログ記事</h2>
             <ArticleList />
             <span><a href={resolve("/blog")}> → 一覧 </a></span>
         </div>
+        <div class="side">
+            <img class="photo" src="/imgs/omg.webp" alt="空の写真" />
+            <div class="diary">
+                <h2>最近の日記</h2>
+                <DiaryCard diary={latestDiary} small />
+            </div>
+        </div>
     </div>
 </main>
 
 <style lang="scss">
-    main {
-        width: 70%;
-        margin: 0 auto;
-    }
-
     $article-width: 65%;
     .article,
     .diary {
         margin: 0 20px 30px 20px;
         width: $article-width;
+    }
+    .content {
+        display: flex;
+    }
+
+    .photo {
+        position: relative;
+        right: 50px;
+        max-width: 500px;
+        margin: 0;
     }
 
     @media (max-width: 640px) {
@@ -47,19 +55,8 @@
             width: 100%;
             border-radius: 20px;
         }
-        .me {
-            gap: 15px;
-            margin: 20px 15px;
-
-            &__icon {
-                width: 80px;
-                height: 80px;
-            }
-            &__title {
-                font-size: 1.5rem;
-            }
-        }
         .content {
+            display: flex;
             flex-direction: column;
         }
         .article {
