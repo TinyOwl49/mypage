@@ -20,7 +20,6 @@ thumbnail: https://img.nyanowl.me/thumbnails/helloblog-fc9352cd.webp
 私の趣味のことを書ける場所が欲しかったからです。
 もちろん、SNSや有名どころのブログサービスを利用する手がありますが、
 もっと自由に何かを書いたり作ったりしてみたいと常々思っていたので、自分で作ることにしました。  
-最近はAIちゃんが優秀なので、色々作りやすくなりましたね。
 
 ## 使った技術
 このブログはSvelteKit + Typescript + SCSSで作られています。  
