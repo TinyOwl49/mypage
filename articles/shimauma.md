@@ -1,7 +1,7 @@
 ---
 title: シマウマのシマシマ、どうしてシマシマ？
 description: ずんだゼミの部誌に投稿した内容です。
-date: 2026-11-21
+date: 2026-11-01
 tags: [数学, Programming]
 thumbnail: https://img.nyanowl.me/articles/shimauma/shimauma_gray-8cec0b0d.webp
 ---
