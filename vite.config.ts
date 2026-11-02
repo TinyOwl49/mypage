@@ -7,7 +7,8 @@ export default defineConfig({
 		sveltekit(),
 		svelteSitemap({
 			domain: 'https://nyanowl.me',
-			outDir: '.vercel/output/static'
+			outDir: '.vercel/output/static',
+			trailingSlashes: true
 		})
 	],
 
