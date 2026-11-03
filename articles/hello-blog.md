@@ -8,7 +8,6 @@ thumbnail: https://img.nyanowl.me/thumbnails/helloblog-fc9352cd.webp
 
 <script>
     import EmbedLink from '$lib/components/EmbedLink.svelte';
-	import { resolve } from "$app/paths";
 </script>
 
 ## 自己紹介
