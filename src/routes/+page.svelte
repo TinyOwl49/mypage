@@ -26,7 +26,7 @@
             <div>
                 <h1 class="profile__title">猫梟犬</h1>
                 <p class="profile__description">
-                    大学生です。 数学, 物理, コンピュータが好きです。
+                    数学, 物理, コンピュータが好きです。
                     専攻は情報科学です。<br />
                     お絵描きとプログラミングを頑張りたいです。
                 </p>
@@ -119,7 +119,11 @@
                 <h2>最近の日記</h2>
                 <DiaryCard diary={latestDiary} small />
             </div>
-            <a href={resolve("/diary")} style="position: relative; left: 30px; bottom: 20px;">日記 一覧</a>
+            <a
+                href={resolve("/diary")}
+                style="position: relative; left: 10px; top: 2px;"
+                >日記 一覧</a
+            >
         </div>
     </div>
 </main>
@@ -218,9 +222,9 @@
     $article-width: 65%;
     .article,
     .diary {
-        margin: 0 20px 30px 20px;
         width: $article-width;
     }
+
     .content {
         display: flex;
         margin-top: 3rem;
