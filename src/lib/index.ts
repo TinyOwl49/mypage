@@ -1,4 +1,4 @@
-// place files you want to import through the `$lib` alias in this folder.
+// place files you want to import through the `#lib` alias in this folder.
 
 export const SITE_URL = 'https://nyanowl.me';
 export const SITE_NAME = '猫梟犬のマイページ';

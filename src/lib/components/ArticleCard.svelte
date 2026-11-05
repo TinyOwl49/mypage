@@ -1,8 +1,8 @@
 <script lang="ts">
     import { resolve } from "$app/paths";
-    import { imageSrc } from "$lib/image";
-    import type { Article } from "$lib/article";
-    import { formatDate } from "$lib/date";
+    import { imageSrc } from "#lib/image.ts";
+    import type { Article } from "#lib/article.ts";
+    import { formatDate } from "#lib/date.ts";
 
     type Props = {
         article: Article;

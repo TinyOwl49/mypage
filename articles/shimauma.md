@@ -7,7 +7,7 @@ thumbnail: https://img.nyanowl.me/articles/shimauma/shimauma_gray-8cec0b0d.webp
 ---
 
 <script>
-  import ZoomableImage from "$lib/components/ZoomableImage.svelte";
+  import ZoomableImage from "#lib/components/ZoomableImage.svelte";
 </script>
 
 ## はじめに

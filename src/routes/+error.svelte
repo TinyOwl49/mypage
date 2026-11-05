@@ -1,10 +1,7 @@
 <script lang="ts">
     import { page } from "$app/state";
 
-    let imageList = [
-        "/imgs/omg_kemono.webp",
-        "/imgs/heshi.webp"
-    ]
+    let imageList = ["/imgs/omg_kemono.webp", "/imgs/heshi.webp"];
 
     const randindex = Math.floor(Math.random() * imageList.length);
     let image = imageList[randindex];
@@ -23,6 +20,6 @@
     }
 
     .icon {
-        width: 100%
+        width: 100%;
     }
 </style>

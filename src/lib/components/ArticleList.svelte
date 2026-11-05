@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { getAllArticles } from "$lib/article";
-	import ArticleCard from "$lib/components/ArticleCard.svelte";
+	import { getAllArticles } from "#lib/article.ts";
+	import ArticleCard from "#lib/components/ArticleCard.svelte";
 
 	type Props = {
 		showTags?: boolean;

@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from "$app/state";
     import { resolve } from "$app/paths";
-    import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "$lib";
+    import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "#lib";
     import "../app.scss";
     import "katex/dist/katex.min.css";
 

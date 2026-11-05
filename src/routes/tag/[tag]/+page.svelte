@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from "$app/paths";
-	import { SITE_DESCRIPTION } from "$lib";
-	import ArticleCard from "$lib/components/ArticleCard.svelte";
+	import { SITE_DESCRIPTION } from "#lib";
+	import ArticleCard from "#lib/components/ArticleCard.svelte";
 
 	let { data } = $props();
 	const tag = $derived(data.tag);

@@ -1,4 +1,4 @@
-import { getDiaryBySlug } from "$lib/diary";
+import { getDiaryBySlug } from "#lib/diary.ts";
 import { error } from "@sveltejs/kit";
 
 export async function load({ params }) {

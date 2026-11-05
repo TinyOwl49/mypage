@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { formatDate } from "$lib/date";
+    import { formatDate } from "#lib/date.ts";
 
     let { data } = $props();
     const post = $derived(data.post);

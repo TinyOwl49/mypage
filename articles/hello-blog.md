@@ -7,7 +7,7 @@ thumbnail: https://img.nyanowl.me/thumbnails/helloblog-fc9352cd.webp
 ---
 
 <script>
-    import EmbedLink from '$lib/components/EmbedLink.svelte';
+    import EmbedLink from '#lib/components/EmbedLink.svelte';
 </script>
 
 ## 自己紹介
@@ -36,7 +36,7 @@ Markdownパーサーにはmdsvexを使用しました。
 これはMDXというライブラリのSvelte版で、設定が簡単な上にSvelteコンポーネントを埋め込めるのが非常に良い点です。
 ```html
 <script>
-    import EmbedLink from '$lib/components/EmbedLink.svelte';
+    import EmbedLink from '#lib/components/EmbedLink.svelte';
 </script>
 
 **埋め込みリンク** を使用できる

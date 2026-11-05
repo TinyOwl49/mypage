@@ -1,8 +1,8 @@
 <script lang="ts">
     import { resolve } from "$app/paths";
-    import { imageSrc } from "$lib/image";
-    import type { Diary } from "$lib/diary";
-    import { formatDate } from "$lib/date";
+    import { imageSrc } from "#lib/image.ts";
+    import type { Diary } from "#lib/diary.ts";
+    import { formatDate } from "#lib/date.ts";
 
     type Props = {
         diary: Diary;

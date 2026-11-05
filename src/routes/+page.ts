@@ -1,4 +1,4 @@
-import { getLatestDiary } from "$lib/diary";
+import { getLatestDiary } from "#lib/diary.ts";
 import { error } from "@sveltejs/kit";
 
 export async function load({ }) {

@@ -1,8 +1,8 @@
 <script lang="ts">
     import { asset, resolve } from "$app/paths";
-    import { SITE_DESCRIPTION, SITE_NAME } from "$lib";
-    import ArticleList from "$lib/components/ArticleList.svelte";
-    import DiaryCard from "$lib/components/DiaryCard.svelte";
+    import { SITE_DESCRIPTION, SITE_NAME } from "#lib";
+    import ArticleList from "#lib/components/ArticleList.svelte";
+    import DiaryCard from "#lib/components/DiaryCard.svelte";
 
     let { data } = $props();
     let latestDiary = $derived(data.latestDiary);
@@ -22,7 +22,7 @@
     <div class="profile">
         <img
             class="profile__icon"
-            src={asset("/imgs/icon.jpg")}
+            src={asset("imgs/icon.jpg")}
             alt="猫梟犬のアイコン"
         />
         <div class="profile__side">
@@ -42,7 +42,7 @@
                     class="linklist__item"
                 >
                     <img
-                        src={asset("/logo/twitter-logo-2429.svg")}
+                        src={asset("logo/twitter-logo-2429.svg")}
                         alt="Twitter"
                         class="linklist__icon"
                         width="50px"
@@ -56,7 +56,7 @@
                     class="linklist__item"
                 >
                     <img
-                        src={asset("/logo/misskey.png")}
+                        src={asset("logo/misskey.png")}
                         alt="Misskey"
                         class="linklist__icon"
                         width="50px"
@@ -70,7 +70,7 @@
                     class="linklist__item"
                 >
                     <img
-                        src={asset("/logo/pixiv.png")}
+                        src={asset("logo/pixiv.png")}
                         alt="Pixiv"
                         class="linklist__icon"
                         style="border-radius: 5px;"

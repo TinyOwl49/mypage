@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { getAllDiary } from "$lib/diary";
-	import DiaryCard from "$lib/components/DiaryCard.svelte";
+	import { getAllDiary } from "#lib/diary.ts";
+	import DiaryCard from "#lib/components/DiaryCard.svelte";
 
 	type Props = {
 		small?: boolean;

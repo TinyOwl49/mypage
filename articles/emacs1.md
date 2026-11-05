@@ -7,8 +7,8 @@ thumbnail: /logo/EmacsIcon.svg
 ---
 
 <script>
-  import EmbedLink from '$lib/components/EmbedLink.svelte';
-  import ZoomableImage from "$lib/components/ZoomableImage.svelte";
+  import EmbedLink from '#lib/components/EmbedLink.svelte';
+  import ZoomableImage from "#lib/components/ZoomableImage.svelte";
 </script>
 
 
