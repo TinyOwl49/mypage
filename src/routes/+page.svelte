@@ -8,6 +8,9 @@
     let latestDiary = $derived(data.latestDiary);
 </script>
 
+<!-- TODO: 隠しページ -->
+<!-- 特定の画像をクリックすると開ける。転移時にマリオ64の波みたいなエフェクトとワープBGMが流れる -->
+
 <svelte:head>
     <title>fukuneko mypage</title>
     <meta name="description" content="猫梟犬のマイページです" />

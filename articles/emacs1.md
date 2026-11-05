@@ -3,7 +3,7 @@ title: Emacs に入門してみた
 description: Emacs に入門してみた感想です。
 date: 2026-08-22
 tags: [日記, Programming]
-thumbnail: /thumbnails/EmacsIcon.svg
+thumbnail: /logo/EmacsIcon.svg
 ---
 
 <script>
