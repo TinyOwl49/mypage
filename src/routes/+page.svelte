@@ -3,6 +3,7 @@
     import { SITE_DESCRIPTION, SITE_NAME } from "#lib";
     import ArticleList from "#lib/components/ArticleList.svelte";
     import DiaryCard from "#lib/components/DiaryCard.svelte";
+    import PopUpText from "#lib/components/PopUpText.svelte";
 
     let { data } = $props();
     let latestDiary = $derived(data.latestDiary);
@@ -95,7 +96,6 @@
             </div>
         </div>
     </div>
-
     <div class="drawing">
         <img
             src="https://img.nyanowl.me/diary/araisan-847f16cc.webp"
@@ -113,19 +113,35 @@
 
     <div class="content">
         <div class="article">
-            <ArticleList />
+            <ArticleList small />
             <span><a href={resolve("/blog")}> → 一覧 </a></span>
         </div>
         <div class="side">
-            <img class="photo" src="/imgs/sky.webp" alt="空の写真" />
             <div class="diary">
                 <h2>最近の日記</h2>
                 <DiaryCard diary={latestDiary} small />
             </div>
-            <a
-                href={resolve("/diary")}
-                style="position: relative; left: 10px; top: 2px;">日記 一覧</a
-            >
+            <span>
+                <a
+                    href={resolve("/diary")}
+                    style="position: relative; left: 10px; top: 2px;"
+                    >日記 一覧</a
+                >
+            </span>
+            <div class="now-playing">
+                <PopUpText text="Now　聴いてるing♫" style="margin: 10px 0; color: skyblue; font-weight: bold;" />
+                <iframe
+                    data-testid="embed-iframe"
+                    style="border-radius:12px; max-width: 480px;"
+                    src="https://open.spotify.com/embed/track/53VJkDqrynkmPEcJmCw9QA?utm_source=generator&si=bafcf93268294464"
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                ></iframe>
+            </div>
         </div>
     </div>
 </main>
@@ -141,15 +157,15 @@
             display: block;
         }
         &__icon {
-            max-width: 220px;
-            border-radius:  5px;
+            max-width: 150px;
+            border-radius: 5px;
         }
         &__title {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
         }
         &__description {
             margin: 0.5rem 0 0 0;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--text-color);
         }
     }
@@ -159,7 +175,7 @@
         flex-direction: row;
         align-items: center;
         gap: 1rem;
-        margin: 2rem 0;
+        margin: 1rem 0;
 
         &__item {
             display: inline-block;
@@ -180,16 +196,19 @@
     .favorite {
         display: flex;
         gap: 1rem;
+
+        font-size: 0.7rem;
     }
 
     .drawing {
         display: flex;
         justify-items: flex-start;
         overflow: auto;
+        margin: 0 auto;
     }
 
     .drawing > img {
-        height: 400px;
+        height: 300px;
     }
 
     @keyframes fly-in {
@@ -222,9 +241,8 @@
         }
     }
 
-    $article-width: 65%;
-    .article,
-    .diary {
+    $article-width: 50%;
+    .article {
         width: $article-width;
     }
 
@@ -236,6 +254,14 @@
     .photo {
         max-width: 400px;
         margin: 0;
+    }
+
+    .side {
+        display: block;
+    }
+
+    .now-playing {
+        margin: 20px 0;
     }
 
     @media (max-width: 640px) {
