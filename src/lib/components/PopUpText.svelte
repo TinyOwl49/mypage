@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { HTMLAttributes } from "svelte/elements";
-    type Props = HTMLAttributes<HTMLDivElement> & {
+
+    type Props =HTMLAttributes<HTMLDivElement> & {
         text: string;
     };
 

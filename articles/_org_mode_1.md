@@ -6,6 +6,6 @@ thumbnail: https://img.nyanowl.me/
 ---
 
 <script>
-  import ZoomableImage from "$lib/components/ZoomableImage.svelte";
+  import ZoomableImage from "#lib/components/ZoomableImage.svelte";
 </script>
 
