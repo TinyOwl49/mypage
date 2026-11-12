@@ -13,16 +13,18 @@
             ? new URL(page.data.post.thumbnail, SITE_URL).href
             : DEFAULT_OG_IMAGE,
     );
+    const canonicalUrl = $derived(`${SITE_URL}${page.url.pathname}`);
 </script>
 
 <svelte:head>
     <!-- TODO: faviconを変える -->
     <link rel="icon" href={DEFAULT_OG_IMAGE} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:image" content={ogImage} />
-    <meta property="og:url" content={`${SITE_URL}${page.url.pathname}`} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 

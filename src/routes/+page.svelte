@@ -32,7 +32,7 @@
                 <p class="profile__description">
                     数学, 物理, コンピュータが好きです。 専攻は情報科学です。<br
                     />
-                    お絵描きとプログラミングを頑張りたいです。
+                    お絵描きとつくるを頑張りたいです。
                 </p>
             </div>
             <div class="linklist">
@@ -129,11 +129,14 @@
                 >
             </span>
             <div class="now-playing">
-                <PopUpText text="Now　聴いてるing♫" style="margin: 10px 0; color: skyblue; font-weight: bold;" />
+                <PopUpText
+                    text="Now　聴いてる♫"
+                    style="margin: 10px 0; color: skyblue; font-weight: bold;"
+                />
                 <iframe
                     data-testid="embed-iframe"
-                    style="border-radius:12px; max-width: 480px;"
-                    src="https://open.spotify.com/embed/track/53VJkDqrynkmPEcJmCw9QA?utm_source=generator&si=bafcf93268294464"
+                    style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/6zNJ1sKencNGk55xfvn8C3?utm_source=generator&si=2b81b0e858074a92"
                     width="100%"
                     height="152"
                     frameBorder="0"
@@ -249,11 +252,6 @@
     .content {
         display: flex;
         margin-top: 3rem;
-    }
-
-    .photo {
-        max-width: 400px;
-        margin: 0;
     }
 
     .side {
