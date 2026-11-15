@@ -107,11 +107,11 @@
         />
         <img
             src="https://img.nyanowl.me/diary/2026/10/sa-baru-b3c70701.webp"
-            alt="sa-baru"
+            alt="サーバル 例の顔"
         />
         <img
             src="https://img.nyanowl.me/diary/araisan-847f16cc.webp"
-            alt="araisan"
+            alt="どこかに迷い込んでしまったアライさん"
         />
     </div>
 
