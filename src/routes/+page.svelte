@@ -98,16 +98,20 @@
     </div>
     <div class="drawing">
         <img
-            src="https://img.nyanowl.me/diary/araisan-847f16cc.webp"
-            alt="araisan"
+            src="https://img.nyanowl.me/diary/2026/11/Dhole-e72afbba.webp"
+            alt="お昼寝ドール"
+        />
+        <img
+            src="https://img.nyanowl.me/diary/2026/11/kaban_cute-5909dffb.webp"
+            alt="生まれたばかりのかばんちゃん"
         />
         <img
             src="https://img.nyanowl.me/diary/2026/10/sa-baru-b3c70701.webp"
             alt="sa-baru"
         />
         <img
-            src="https://img.nyanowl.me/diary/2026/11/kaban_cute-5909dffb.webp"
-            alt="birthday"
+            src="https://img.nyanowl.me/diary/araisan-847f16cc.webp"
+            alt="araisan"
         />
     </div>
 
