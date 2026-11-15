@@ -24,6 +24,9 @@
                 />
             {/if}
             <h1 class="head__title">{post.title}</h1>
+            <p class="head__description">
+                {post.description}
+            </p>
             <p class="head__meta">
                 {formatDate(new Date(post.date))}
             </p>
@@ -56,9 +59,13 @@
             font-size: 2rem;
             margin-bottom: 2rem;
         }
+        &__description {
+            text-align: center;
+            font-size: 1.1rem;
+        }
         &__meta {
             text-align: center;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--secondary-color);
             margin: 0.2rem 0;
         }
