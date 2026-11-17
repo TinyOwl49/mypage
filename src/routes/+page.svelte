@@ -37,20 +37,6 @@
             </div>
             <div class="linklist">
                 <a
-                    href="https://x.com/kasumi_fukurou"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="linklist__item"
-                >
-                    <img
-                        src={asset("logo/twitter-logo-2429.svg")}
-                        alt="Twitter"
-                        class="linklist__icon"
-                        width="50px"
-                        height="50px"
-                    />
-                </a>
-                <a
                     href="https://misskey.io/@tinyowl"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -137,17 +123,7 @@
                     text="Now　聴いてる♫"
                     style="margin: 10px 0; color: skyblue; font-weight: bold;"
                 />
-                <iframe
-                    data-testid="embed-iframe"
-                    style="border-radius:12px"
-                    src="https://open.spotify.com/embed/track/6zNJ1sKencNGk55xfvn8C3?utm_source=generator&si=2b81b0e858074a92"
-                    width="100%"
-                    height="152"
-                    frameBorder="0"
-                    allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
-                ></iframe>
+                {@html `<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3UbVp0E9RSIp8HL401YHi0?utm_source=generator&si=60cd10f50b08410b" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`}
             </div>
         </div>
     </div>
