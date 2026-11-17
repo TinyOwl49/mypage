@@ -1,8 +1,11 @@
 <script lang="ts">
     import { formatDate } from "#lib/date.ts";
+    import { asset, resolve } from "$app/paths";
 
     let { data } = $props();
     const post = $derived(data.post);
+    const next = $derived(data.next);
+    const previous = $derived(data.previous);
     const ContentComponent = $derived(post.content);
 </script>
 
@@ -35,6 +38,19 @@
             <ContentComponent />
         </div>
     </article>
+
+    <div class="goto">
+        {#if previous}
+            <a href={resolve("/diary/[slug]", { slug: previous })}>前の日記</a>
+        {:else}
+            <span>前の日記</span>
+        {/if}
+        {#if next}
+            <a href={resolve("/diary/[slug]", { slug: next })}>次の日記</a>
+        {:else}
+            <span>次の日記</span>
+        {/if}
+    </div>
 </main>
 
 <style lang="scss">
@@ -76,6 +92,16 @@
             max-height: 50vh;
             border-radius: 5px;
         }
+    }
+
+    .goto {
+        display: flex;
+        margin-top: 4rem;
+        justify-content: space-around;
+    }
+
+    .goto > span {
+        color: var(--secondary-color);
     }
 
     @media (max-width: 640px) {

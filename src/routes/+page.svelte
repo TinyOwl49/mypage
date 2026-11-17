@@ -13,8 +13,8 @@
 <!-- 特定の画像をクリックすると開ける。転移時にマリオ 64 の波みたいなエフェクトとワープ BGM が流れる -->
 
 <svelte:head>
-    <title>fukuneko mypage</title>
-    <meta name="description" content="猫梟犬のマイページです" />
+    <title>nyanowl</title>
+    <meta name="description" content="nyanowl.meです" />
     <meta name="og:title" content={SITE_NAME} />
     <meta name="og:description" content={SITE_DESCRIPTION} />
 </svelte:head>
@@ -24,11 +24,10 @@
         <img
             class="profile__icon"
             src={asset("imgs/icon.jpg")}
-            alt="猫梟犬のアイコン"
+            alt="アイコン"
         />
         <div class="profile__side">
             <div>
-                <h1 class="profile__title">猫梟犬</h1>
                 <p class="profile__description">
                     数学, 物理, コンピュータが好きです。 専攻は情報科学です。<br
                     />
@@ -142,9 +141,6 @@
         &__icon {
             max-width: 150px;
             border-radius: 5px;
-        }
-        &__title {
-            font-size: 1.3rem;
         }
         &__description {
             margin: 0.5rem 0 0 0;

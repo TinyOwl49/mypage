@@ -1,7 +1,12 @@
-import { getDiaryBySlug } from "#lib/diary.ts";
+import { getDiaryBySlug, getNextAndPreviousDiarySlug } from "#lib/diary.ts";
 import { error } from "@sveltejs/kit";
 
 export async function load({ params }) {
-	const post = await getDiaryBySlug(params.slug);
-	return { post: post || error(404, "日記が見つかりませんでした") };
+    const diary = await getDiaryBySlug(params.slug);
+    const np = getNextAndPreviousDiarySlug(params.slug);
+    return {
+        post: diary || error(404, "日記が見つかりませんでした"),
+        next: np?.next,
+        previous: np?.previous
+    }
 }

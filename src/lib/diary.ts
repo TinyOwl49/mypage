@@ -7,13 +7,11 @@ export type Diary = {
     thumbnail?: string;
 };
 
-export async function getDiaryBySlug(slug: string) {
-    const allDiaryFiles = import.meta.glob('/diary/*.md');
-    const path = `/diary/${slug}.md`;
-
-    if (!(path in allDiaryFiles)) {
-        return null;
+async function getDiaryData(path: string, slug?: string) {
+    if (!slug) {
+        slug = path.split('/').pop()?.replace('.md', '') || '';
     }
+    const allDiaryFiles = import.meta.glob('/diary/*.md');
 
     try {
         const diary = (await allDiaryFiles[path]()) as any;
@@ -30,6 +28,17 @@ export async function getDiaryBySlug(slug: string) {
         console.error(`Error loading diary ${slug}:`, e);
         return null;
     }
+}
+
+export async function getDiaryBySlug(slug: string) {
+    const allDiaryFiles = import.meta.glob('/diary/*.md');
+    const path = `/diary/${slug}.md`;
+
+    if (!(path in allDiaryFiles)) {
+        return null;
+    }
+
+    return await getDiaryData(path, slug);
 }
 
 export function getAllDiary(): { diaries: Diary[] } {
@@ -60,22 +69,29 @@ export async function getLatestDiary() {
     const filepaths = Object.keys(allDiaryFiles);
     if (filepaths.length <= 0) return null;
 
-    const file = filepaths[filepaths.length - 1];
-    const slug = file.split('/').pop()?.replace('.md', '') || '';
+    const path = filepaths[filepaths.length - 1];
 
-    try {
-        const diary = (await allDiaryFiles[file]()) as any;
+    return await getDiaryData(path);
+}
 
-        return {
-            slug,
-            title: diary.metadata.title,
-            description: diary.metadata.description || '',
-            content: diary.default,
-            date: diary.metadata.date,
-            thumbnail: diary.metadata.thumbnail || null
-        } as Diary;
-    } catch (e) {
-        console.error(`Error loading diary ${slug}:`, e);
-        return null;
+export function getNextAndPreviousDiarySlug(date: string) {
+    const allDiaryFiles = import.meta.glob('/diary/*.md');
+    const filepaths = Object.keys(allDiaryFiles);
+    if (filepaths.length <= 0) return null;
+
+    const index = filepaths.indexOf(`/diary/${date}.md`);
+    if (index == -1) return null;
+
+    let next = null;
+    if (index < filepaths.length - 1) {
+        const nextPath = filepaths[index + 1];
+        next = nextPath.split('/').pop()?.replace('.md', '') || '';
     }
+    let previous = null;
+    if (index > 0) {
+        const previousPath = filepaths[index - 1];
+        previous = previousPath.split('/').pop()?.replace('.md', '') || '';
+    }
+
+    return { next: next, previous: previous };
 }
