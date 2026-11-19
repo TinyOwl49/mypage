@@ -126,6 +126,12 @@
             </div>
         </div>
     </div>
+    <a class="corner-b" href="https://dic.pixiv.net/a/B%E6%A1%88">
+        <img
+            src="https://img.nyanowl.me/diary/2026/11/B-71071a43.webp"
+            alt="B案"
+        />
+    </a>
 </main>
 
 <style lang="scss">
@@ -238,6 +244,20 @@
         margin: 20px 0;
     }
 
+    .corner-b {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 150px;
+        z-index: 10;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
     @media (max-width: 640px) {
         main {
             width: 100%;
@@ -250,6 +270,9 @@
         .article {
             width: auto;
             margin: 0 15px 20px 15px;
+        }
+        .corner-b {
+            display: none;
         }
     }
 </style>
