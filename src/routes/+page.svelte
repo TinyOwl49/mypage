@@ -123,7 +123,7 @@
                     text="Now　聴いてる♫"
                     style="margin: 10px 0; color: skyblue; font-weight: bold;"
                 />
-                {@html `<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3UbVp0E9RSIp8HL401YHi0?utm_source=generator&si=60cd10f50b08410b" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`}
+                {@html `<iframe width="100%" height="315" src="https://www.youtube.com/embed/9gDTQAYkmbQ?si=hk6Fk7w5gNv6zxT_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`}
             </div>
         </div>
         <div class="gallery">
@@ -133,13 +133,16 @@
                 alt="くるくるサーバル"
             />
 
-            <div class="corner-b">
-                <a href="https://dic.pixiv.net/a/B%E6%A1%88">
-                    <img
-                        src="https://img.nyanowl.me/diary/2026/11/B-71071a43.webp"
-                        alt="B案"
-                    />
-                </a>
+            <div>
+                <div class="corner-b">
+                    <a href="https://dic.pixiv.net/a/B%E6%A1%88">
+                        <img
+                            src="https://img.nyanowl.me/diary/2026/11/B-71071a43.webp"
+                            alt="B案"
+                        />
+                    </a>
+                </div>
+                <p class="congratiration-b">おめでとう！</p>
             </div>
         </div>
     </div>
@@ -253,6 +256,13 @@
         height: 100%;
     }
 
+    .congratiration-b {
+        color: purple;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
     @keyframes fly-in {
         80% {
             transform: translate(4px, -3px) rotate(-3deg) scale(0.98);
@@ -289,7 +299,7 @@
         margin-top: 3rem;
     }
 
-    $article-width: 50%;
+    $article-width: 45%;
     .article {
         width: $article-width;
     }
