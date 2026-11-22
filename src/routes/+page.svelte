@@ -4,6 +4,7 @@
     import ArticleList from "#lib/components/ArticleList.svelte";
     import DiaryCard from "#lib/components/DiaryCard.svelte";
     import PopUpText from "#lib/components/PopUpText.svelte";
+    import ZoomableImage from "#lib/components/ZoomableImage.svelte";
 
     let { data } = $props();
     let latestDiary = $derived(data.latestDiary);
@@ -125,13 +126,56 @@
                 {@html `<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3UbVp0E9RSIp8HL401YHi0?utm_source=generator&si=60cd10f50b08410b" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`}
             </div>
         </div>
+        <div class="gallery">
+            <img
+                src="https://img.nyanowl.me/diary/2026/11/kemono_loop-2c72eabc.webp"
+                width="250px"
+                alt="くるくるサーバル"
+            />
+
+            <div class="corner-b">
+                <a href="https://dic.pixiv.net/a/B%E6%A1%88">
+                    <img
+                        src="https://img.nyanowl.me/diary/2026/11/B-71071a43.webp"
+                        alt="B案"
+                    />
+                </a>
+            </div>
+        </div>
     </div>
-    <a class="corner-b" href="https://dic.pixiv.net/a/B%E6%A1%88">
-        <img
-            src="https://img.nyanowl.me/diary/2026/11/B-71071a43.webp"
-            alt="B案"
+
+    <div class="picture">
+        <ZoomableImage
+            src="https://img.nyanowl.me/diary/2026/11/image9-b7eae6d4.webp"
+            height="250px"
+            alt="森"
         />
-    </a>
+        <ZoomableImage
+            src="https://img.nyanowl.me/diary/2026/10/1-d2dd2fe3.webp"
+            height="250px"
+            alt="ブロッコリー"
+        />
+        <ZoomableImage
+            src="https://img.nyanowl.me/diary/2026/10/名称未設定-f69d1ab9.webp"
+            height="250px"
+            alt="最近の思い出"
+        />
+        <ZoomableImage
+            src="https://img.nyanowl.me/diary/2026/10/screen1-2d70ca6e.webp"
+            height="250px"
+            alt="風景"
+        />
+        <ZoomableImage
+            src="https://img.nyanowl.me/diary/2026/10/p5js_create-ea6f0f0b.webp"
+            height="250px"
+            alt="風景2"
+        />
+        <ZoomableImage
+            src="https://img.nyanowl.me/diary/2026/11/soradane3-eed22b9e.webp"
+            height="250px"
+            alt="空だね"
+        />
+    </div>
 </main>
 
 <style lang="scss">
@@ -185,15 +229,28 @@
         font-size: 0.7rem;
     }
 
-    .drawing {
+    .drawing,
+    .picture {
         display: flex;
         justify-items: flex-start;
         overflow: auto;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 
     .drawing > img {
         height: 300px;
+    }
+
+    .corner-b {
+        border: 10px ridge darkorchid;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .corner-b > a > img {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     @keyframes fly-in {
@@ -226,36 +283,30 @@
         }
     }
 
+    .content {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 3rem;
+    }
+
     $article-width: 50%;
     .article {
         width: $article-width;
-    }
-
-    .content {
-        display: flex;
-        margin-top: 3rem;
     }
 
     .side {
         display: block;
     }
 
-    .now-playing {
-        margin: 20px 0;
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
     }
 
-    .corner-b {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        display: block;
-        width: 150px;
-        z-index: 10;
-
-        img {
-            display: block;
-            width: 100%;
-        }
+    .now-playing {
+        margin: 20px 0;
     }
 
     @media (max-width: 640px) {
@@ -270,9 +321,6 @@
         .article {
             width: auto;
             margin: 0 15px 20px 15px;
-        }
-        .corner-b {
-            display: none;
         }
     }
 </style>
