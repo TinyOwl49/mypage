@@ -84,6 +84,10 @@
     </div>
     <div class="drawing">
         <img
+            src="https://img.nyanowl.me/diary/2026/11/shimauma_modoki-98e54cc5.webp"
+            alt="サバンナシマシマオオナメクジ"
+        />
+        <img
             src="https://img.nyanowl.me/diary/2026/11/Dhole-e72afbba.webp"
             alt="お昼寝ドール"
         />
