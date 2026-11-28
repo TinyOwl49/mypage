@@ -1,114 +1,110 @@
 <script lang="ts">
-	import { formatDate } from "#lib/date.ts";
-	import { resolve } from "$app/paths";
+    import { formatDate } from "#lib/date.ts";
+    import { resolve } from "$app/paths";
 
-	let { data } = $props();
-	const post = $derived(data.post);
-	const ContentComponent = $derived(post.content);
+    let { data } = $props();
+    const post = $derived(data.post);
+    const ContentComponent = $derived(post.content);
 </script>
 
 <svelte:head>
-	<title>{post.title}</title>
-	<meta name="description" content={post.description} />
-	<meta name="og:title" content={post.title} />
-	<meta name="og:description" content={post.description} />
+    <title>{post.title}</title>
+    <meta name="description" content={post.description} />
+    <meta name="og:title" content={post.title} />
+    <meta name="og:description" content={post.description} />
 </svelte:head>
 
 <main>
-	<article>
-		<div class="head">
-			<h1 class="head__title">{post.title}</h1>
-			<div class="head__info">
-				<p class="head__meta">
-					最終更新：{formatDate(
-						new Date(post.date),
-					)}
-				</p>
-				{#if post.tags && post.tags.length > 0}
-					<div class="head__tags">
-						{#each post.tags as tag}
-							<a
-								class="head__link"
-								href={resolve(
-									"/tag/[tag]",
-									{
-										tag: tag,
-									},
-								)}>{tag}</a
-							>
-						{/each}
-					</div>
-				{/if}
-			</div>
-		</div>
-		<div class="prose article-content">
-			<ContentComponent />
-		</div>
-	</article>
+    <article>
+        <div class="head">
+            <h1 class="head__title">{post.title}</h1>
+            <div class="head__info">
+                <p class="head__meta">
+                    最終更新：{formatDate(new Date(post.date))}
+                </p>
+                {#if post.tags && post.tags.length > 0}
+                    <div class="head__tags">
+                        {#each post.tags as tag}
+                            <a
+                                class="head__link"
+                                href={resolve("/tag/[tag]", {
+                                    tag: tag,
+                                })}>{tag}</a
+                            >
+                        {/each}
+                    </div>
+                {/if}
+            </div>
+        </div>
+        <div class="prose article-content">
+            <ContentComponent />
+        </div>
+    </article>
 </main>
 
 <style lang="scss">
-	main {
-		width: var(--main-width);
-		margin: 0 auto;
-	}
+    main {
+        width: var(--main-width);
+        margin: 0 auto;
+        padding: 1rem; /* スマホから見た時の余白のため */
+    }
 
-	.article-content {
-		font-size: 1.2rem;
+    .article-content {
+        font-size: 1.2rem;
 
-		/* Markdown本文の画像（<p>に包まれるもの）のみを対象にし、
+        /* Markdown本文の画像（<p>に包まれるもの）のみを対象にし、
 		   EmbedLinkなど独自レイアウトを持つコンポーネント内の画像には影響させない */
-		:global(p > img) {
-			max-width: 100%;
-			height: auto;
-		}
+        :global(p > img) {
+            max-width: 100%;
+            height: auto;
+        }
 
-		:global(.katex-display) {
-			overflow-x: auto;
-			overflow-y: hidden;
-			padding: 0.2rem 0;
-		}
-	}
+        :global(.katex-display) {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.2rem 0;
+        }
+    }
 
-	.head {
-		margin-bottom: 10vh;
-		&__title {
-			text-align: center;
-			font-size: 2rem;
-			margin-bottom: 2rem;
-		}
-		&__meta {
-			font-size: 1rem;
-			color: var(--secondary-color);
-			margin: 0.2rem 0;
-		}
-		&__tags {
-			display: flex;
-			gap: 0.7rem;
-			flex-wrap: wrap;
-		}
-		&__link {
-			color: var(--link-color);
-		}
-	}
+    .head {
+        margin-bottom: 10vh;
+        &__title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        &__meta {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin: 0.2rem 0;
+        }
+        &__tags {
+            display: flex;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+        }
+        &__link {
+            color: var(--link-color);
+        }
+    }
 
-	@media (max-width: 640px) {
-		main {
-			width: 100%;
-		}
+    @media (max-width: 640px) {
+        main {
+            width: 100%;
+        }
 
-		.article-content :global(.katex-display > .katex > .katex-html > .tag) {
-			position: static;
-			display: inline-block;
-			margin-left: 1em;
-		}
+        .article-content :global(.katex-display > .katex > .katex-html > .tag) {
+            position: static;
+            display: inline-block;
+            margin-left: 1em;
+        }
 
-		.head {
-			margin-bottom: 3rem;
-			&__title {
-				font-size: 1.5rem;
-				margin-bottom: 1.2rem;
-			}
-		}
-	}
+        .head {
+            margin-bottom: 3rem;
+            &__title {
+                font-size: 1.5rem;
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
 </style>

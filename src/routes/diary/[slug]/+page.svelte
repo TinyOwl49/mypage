@@ -1,6 +1,6 @@
 <script lang="ts">
     import { formatDate } from "#lib/date.ts";
-    import { asset, resolve } from "$app/paths";
+    import { resolve } from "$app/paths";
 
     let { data } = $props();
     const post = $derived(data.post);
@@ -57,6 +57,7 @@
     main {
         width: 55%;
         margin: 0 auto;
+        padding: 1rem; /* スマホから見た時の余白のため */
     }
 
     .article-content {
