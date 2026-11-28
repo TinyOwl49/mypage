@@ -96,6 +96,10 @@
             alt="生まれたばかりのかばんちゃん"
         />
         <img
+            src=" https://img.nyanowl.me/diary/2026/11/omg_kemono-b31820c2.webp"
+            alt="おーまいがー"
+        />
+        <img
             src="https://img.nyanowl.me/diary/2026/10/sa-baru-b3c70701.webp"
             alt="サーバル 例の顔"
         />
@@ -127,7 +131,7 @@
                     text="Now　聴いてる♫"
                     style="margin: 10px 0; color: skyblue; font-weight: bold;"
                 />
-                {@html `<iframe width="100%" height="315" src="https://www.youtube.com/embed/9gDTQAYkmbQ?si=hk6Fk7w5gNv6zxT_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`}
+                {@html `<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7lrxDKr8QXLOzh5IKQ04eS?utm_source=generator&si=b94f212a8b504193" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`}
             </div>
         </div>
         <div class="gallery">
@@ -190,7 +194,7 @@
         display: flex;
         flex-direction: columns;
         gap: 1rem;
-        margin-bottom: 2rem;
+        margin: 2rem;
 
         &__side {
             display: block;

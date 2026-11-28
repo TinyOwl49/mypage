@@ -25,7 +25,6 @@ html {
 
 body {
   margin: 0;
-  padding: 2rem;
   // font-family: "YakuHanJPs_Noto", "Noto Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-family: var(--main-font);
   color: var(--primary-color);
@@ -35,6 +34,11 @@ body {
   hyphens: auto;
 
   line-height: 1.75;
+}
+
+// paddingとborderを含めた幅を100%にする
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 h1,

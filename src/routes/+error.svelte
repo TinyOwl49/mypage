@@ -1,25 +1,65 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
+    import { resolve } from "$app/paths";
     import { page } from "$app/state";
 
-    let imageList = ["/imgs/omg_kemono.webp", "/imgs/heshi.webp"];
-
-    const randindex = Math.floor(Math.random() * imageList.length);
-    let image = imageList[randindex];
+    function handleKeydown(e: KeyboardEvent) {
+        if (e.key === "Enter" && !e.isComposing) {
+            goto(resolve("/"));
+        }
+    }
 </script>
 
-<main>
-    <img class="icon" src={image} alt="hello" />
-    <h1>{page.status}</h1>
-    <p>{page.error?.message || "ページが見つかりません"}</p>
-</main>
+<svelte:window onkeydown={handleKeydown} />
 
-<style>
-    main {
-        margin: 0 auto;
-        width: 60%;
+<div class="blue-screen">
+    <div class="blue-screen__title">nyanowl</div>
+    <p></p>
+    <span class="blue-screen__text">
+        An error has occurred. To continue: <br />
+        Press Enter to return to Home, or<br />
+        Press
+        <span class="whitefill">全部壊すボタン</span> to restart your computer.
+        If you do this, you will lose any unsaved information in all open
+        applications.
+        <br /><br />
+        Error code: {page.status} - {page.error?.message || "Page Not found"}
+    </span>
+</div>
+
+<style lang="scss">
+    :global(body:has(.blue-screen)) {
+        background-color: mediumblue;
+        height: 100vh;
     }
 
-    .icon {
-        width: 100%;
+    .blue-screen {
+        color: #eee;
+        font-family: var(--retro-font);
+        height: 80vh;
+        padding: 20px 18%;
+        overflow-wrap: break-word;
+        padding-top: 20vh;
+
+        &__title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            background-color: #aaa;
+            color: mediumblue;
+            width: 100px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        &__text {
+            font-size: 1.4rem;
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+
+    .whitefill {
+        background-color: #eee;
+        color: #eee;
     }
 </style>
