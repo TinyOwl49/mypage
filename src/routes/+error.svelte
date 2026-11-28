@@ -19,7 +19,7 @@
         An error has occurred. To continue: <br />
         Press Enter to return to Home, or<br />
         Press
-        <span class="whitefill">全部壊すボタン</span> to restart your computer.
+        <span class="whitefill">　　　　　　</span> to restart your computer.
         If you do this, you will lose any unsaved information in all open
         applications.
         <br /><br />

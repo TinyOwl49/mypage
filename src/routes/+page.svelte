@@ -135,11 +135,13 @@
             </div>
         </div>
         <div class="gallery">
-            <img
-                src="https://img.nyanowl.me/diary/2026/11/kemono_loop-2c72eabc.webp"
-                width="250px"
-                alt="くるくるサーバル"
-            />
+            <div style="text-align: center;">
+                <img
+                    src="https://img.nyanowl.me/diary/2026/11/kemono_loop-2c72eabc.webp"
+                    width="250px"
+                    alt="くるくるサーバル"
+                />
+            </div>
 
             <div>
                 <div class="corner-b">
@@ -190,11 +192,14 @@
 </main>
 
 <style lang="scss">
+    main {
+        padding: 0 5%;
+    }
     .profile {
         display: flex;
         flex-direction: columns;
         gap: 1rem;
-        margin: 2rem;
+        margin: 2rem 0;
 
         &__side {
             display: block;
@@ -245,6 +250,7 @@
         display: flex;
         justify-items: flex-start;
         overflow: auto;
+        scrollbar-width: none; /* Firefox対応 */
         margin: 20px auto;
     }
 
